@@ -1,0 +1,107 @@
+body{
+	font-family: Arial;
+}
+/*头部导航内容*/
+.head{
+	width: 100%;
+	background: #f4f4f4;
+	border-bottom: 1px solid #e5e5e5;
+	clear: both;
+}
+.head a:hover{
+	color: #0cb95f;
+    text-decoration: underline;
+}
+.container{
+	width: 980px;
+	margin: 0 auto;
+	height: 40px;
+	line-height: 40px;
+}
+/*左侧内容*/
+.head_left{
+	float: left;
+}
+.head_left li{
+	float: left;
+	margin-right: 5px;
+}
+.head_left li a,span{
+	white-space: nowrap;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	float: left;
+}
+s{
+	float: right;
+	display: block;
+	height: 20px;
+	border-right: 1px solid #e5e5e5;
+	margin:10px 10px 10px 10px;
+}
+.wx,.sj,.nav{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin: 10px 5px 10px 0;
+}
+.wx{
+	background: url(../../imgs/public/icons.png) -49px -3px;
+}
+.sj{
+	background: url(../../imgs/public/icons.png) -68px -3px;
+}
+/*右侧内容*/
+.head_right{
+	float: right;
+}
+.head_right li{
+	float: left;
+}
+.nav{
+	background: url(../../imgs/public/icons.png) -121px 1px;
+	float: right;
+}
+.head .li_nav{
+    width: 80px;
+    padding-left: 20px;
+    margin-left: 5px;
+    position: relative;
+}
+/*二级导航内容*/
+.sub-nav{
+	border:1px solid #ccc;
+	position: absolute;
+	top: 41px;
+	right: -1px;
+	padding: 10px 0;
+	background: #fff;
+	width: 450px;
+	text-align: center;
+	line-height: 1.5;
+	z-index: -141;
+	display: none;
+}
+/*二级导航左侧内容*/
+.nav_left, .nav_right{
+	display: inline-block;
+	width: 44%;
+	text-align: left;
+}
+.h2{
+	font-size: 14px;
+	color: #0cb95f;
+	padding: 0 0 5px 5px;
+}
+.sub-nav a{
+	padding: 2px 5px;
+	color: #333;
+	display: inline-block;
+	vertical-align: top;
+}
+/*二级导航右侧内容*/
+.nav_right{
+	border-left: 1px solid #ccc;
+	padding-left: 15px;
+}
