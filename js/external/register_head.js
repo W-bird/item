@@ -8,10 +8,11 @@ $.ajax({
 	}
 });
 
-$("#nav").mousemove(move);
-$("#nav").mouseout(out);
+$("#nav").mousemove(move).stop();
+$("#nav").mouseout(out).stop();
 $(".sub-nav").mousemove(move);
 $(".sub-nav").mouseout(out);
+
 
 function move() {
 	$("#nav").css({"textDecoration":"none"});
