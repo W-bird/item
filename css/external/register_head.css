@@ -1,5 +1,5 @@
 body{
-	font-family: Arial;
+	font-family: Arial,"宋体";
 }
 /*头部导航内容*/
 .head{
@@ -58,10 +58,11 @@ s{
 }
 .head_right li{
 	float: left;
+	margin-right: 3px;
 }
 .nav{
 	background: url(../../imgs/public/icons.png) -121px 1px;
-	float: right;
+	float: left;
 }
 .head .li_nav{
     width: 80px;
@@ -72,6 +73,7 @@ s{
 /*二级导航内容*/
 .sub-nav{
 	border:1px solid #ccc;
+	border-top: none;
 	position: absolute;
 	top: 41px;
 	right: -1px;
@@ -80,8 +82,11 @@ s{
 	width: 450px;
 	text-align: center;
 	line-height: 1.5;
-	z-index: -141;
 	display: none;
+}
+/*二级导航内超链接 hover 效果*/
+.sub-nav a:hover{
+	color: #000;
 }
 /*二级导航左侧内容*/
 .nav_left, .nav_right{
@@ -104,4 +109,34 @@ s{
 .nav_right{
 	border-left: 1px solid #ccc;
 	padding-left: 15px;
+}
+
+/* logo 图区*/
+.logo-big{
+	width: 100%;
+}
+.logo{
+	width: 990px;
+	margin: 0 auto;
+	padding: 25px 0;
+	overflow: hidden;
+}
+.logo-a{
+	width: 210px;
+	height: 70px;
+	display: block;
+	background: url(../../imgs/register/logo.jpg);
+	float: left;
+}
+.logo-p{
+	float: left;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+	color: #666;
+	border-left: 1px solid #e5e5e5;
+	height: 55px;
+	line-height: 55px;
+	margin: 10px 0 0 10px;
+	padding-left: 20px;
 }
