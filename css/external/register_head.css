@@ -75,6 +75,8 @@ s{
 	border:1px solid #ccc;
 	border-top: none;
 	position: absolute;
+	float: left;
+	z-index: 100;
 	top: 41px;
 	right: -1px;
 	padding: 10px 0;

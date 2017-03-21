@@ -1,11 +1,13 @@
 //引入外部文件到 head 标签中
 $("#head").load("../html/external/register_head.html", function() {
 	var str = window.location.href;
-	var ntr  = str.substring(33);
+	var nn = str.lastIndexOf("/");
+	var ntr  = str.substring(nn+1);
 	if (ntr == "log-in.html") {
-		$("#logo-p").text("用户登录")
+		$("#logo-p").text("用户登录");
 	} else if (ntr == "sign-in.html") {
-		$("#logo-p").text("用户注册")
+		$("#logo-p").text("用户注册");
+	} else {
 	}
 });
 
