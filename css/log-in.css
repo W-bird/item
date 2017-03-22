@@ -80,6 +80,7 @@
 .check{
 	font-size: 14px;
 	color: #333;
+	margin-bottom: 0;
 }
 .ckbox{
 	display: inline-block;
@@ -139,4 +140,18 @@
 }
 .WB{
 	background-position: -448px -174px;
+}
+.text{
+	margin-bottom: 10px;
+	color: #e16070;
+	display: none;
+}
+.txt-span{
+	background: url(../imgs/public/icons.png)-280px -120px;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+}
+.verify{
+	
 }
