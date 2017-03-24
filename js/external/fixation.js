@@ -41,3 +41,17 @@ $("#fixation").on("mouseleave", ".i", function() {
 			display:"none"
 		});
 })
+
+$(window).scroll(function() {
+	var st = $(this).scrollTop();
+	if (st >= 500) {
+		$(".i7").show();
+		$('.i7').css({'borderTop':'none'});
+	} else if (st <= 500) {
+		$(".i7").hide();
+	}
+})
+
+$('.i7').click(function() {
+	$('body').animate({scrollTop:0}, 100);
+})
