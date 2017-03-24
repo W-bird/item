@@ -79,3 +79,66 @@ $("#header").on("mouseenter",".head-App", function() {
 $("#header").on("mouseleave",".head-App", function() {
 	$(".left-APP").hide(100);
 })
+
+
+$("#header").on("mouseenter",".zxyp,.s1", function() {
+	$(".s1").show();
+	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+})
+$("#header").on("mouseleave",".zxyp,.s1", function() {
+	$(".s1").hide();
+	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
+})
+
+$("#header").on("mouseenter",".ylqx,.s2", function() {
+	$(".s2").show();
+	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+})
+$("#header").on("mouseleave",".ylqx,.s2", function() {
+	$(".s2").hide();
+	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
+	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+})
+
+$("#header").on("mouseenter",".ysbj,.s3", function() {
+	$(".s3").show();
+	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+})
+$("#header").on("mouseleave",".ysbj,.s3", function() {
+	$(".s3").hide();
+	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
+	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+})
+
+$("#header").on("mouseenter",".jsyp,.s4", function() {
+	$(".s4").show();
+	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+})
+$("#header").on("mouseleave",".jsyp,.s4", function() {
+	$(".s4").hide();
+	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
+	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+})
+
+$("#header").on("mouseenter",".zyyp,.s5", function() {
+	$(".s5").show();
+	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+})
+$("#header").on("mouseleave",".zyyp,.s5", function() {
+	$(".s5").hide();
+	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
+	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+})
+
+$("#header").on("mouseenter",".mrhf,.s6", function() {
+	$(".s6").show();
+	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
+})
+$("#header").on("mouseleave",".mrhf,.s6", function() {
+	$(".s6").hide();
+	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+})

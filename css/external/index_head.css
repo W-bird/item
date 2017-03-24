@@ -377,10 +377,7 @@ s{
 	border-right: 1px solid #e5e5e5;
 }
 .second-ul li:hover{
-	background: #f4f4f4;
 	width: 179px;
-	border-right: 0;
-	border-bottom: 1px solid #e5e5e5;
 }
 .second-ul .subset-last:hover{
 	border-bottom:none;
@@ -440,6 +437,7 @@ s{
 	border: 1px solid #e5e5e5;
 	min-height: 389px;
 	padding: 0 10px;
+	display: none;
 }
 .subset-ul{
 	padding: 0 45px 0 10px;
