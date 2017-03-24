@@ -3,8 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<!--引入初始化样式-->
 	<link rel="stylesheet" type="text/css" href="../css/initial.css">
+	<!--引入头尾样式-->
 	<link rel="stylesheet" type="text/css" href="../css/external/register_head.css">
+	<link rel="stylesheet" type="text/css" href="../css/external/register_foot.css">
+	<!--引入注册页面样式-->
+	<link rel="stylesheet" type="text/css" href="../css/sign-in.css">
+	<!--引入JQuery库-->
 	<script type="text/javascript" src="../JQku/jquery-1.12.4.js"></script>
 </head>
 <body>
@@ -12,5 +18,126 @@
 	<div id="head"></div>
 	<script type="text/javascript" src="../js/external/register_head.js"></script>
 	<!-- <script type="text/javascript" src="../js/sign-in.js"></script> -->
+
+	<div class="container-box">
+		<div class="center-box">
+			<ul class="ul_first">
+				<li><a href="#" class="li-a">个人用户</a></li>
+				<li><a href="firm-sign-in.html">商家入驻</a></li>
+				<div class="go-log">已有账号？<a href="log-in.html">直接登录</a></div>
+			</ul>
+			<ul class="form">
+				<li class="first-li">
+					<span class="form-span">注册信息（必填项）</span>
+				</li>
+				<li>
+					<span class="form-val">
+						<label>*</label>
+						用户名 :
+					</span>
+					<span class="name-span">
+						<i class="name-i"></i>
+						<input type="text" name="name">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						<label>*</label>
+						登录密码 :
+					</span>
+					<span class="name-span">
+						<i class="pwd-i"></i>
+						<input type="password" name="name">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						<label>*</label>
+						确认密码 :
+					</span>
+					<span class="name-span">
+						<i class="pwd-i"></i>
+						<input type="password" name="name">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						<label>*</label>
+						手机号码 :
+					</span>
+					<span class="name-span">
+						<input type="text" name="name" class="form-ipt">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						<label>*</label>
+						手机验证码 :
+					</span>
+					<span class="name-span">
+						<input type="text" name="name" class="form-ipt" style="width : 172px;">
+						<a href="#" class="ipt-a">发送验证码</a>
+					</span>
+				</li>
+				<li class="first-li">
+					<span class="form-span">个人信息（选填项）</span>
+				</li>
+				<li>
+					<span class="form-val">
+						真实姓名 :
+					</span>
+					<span class="name-span">
+						<input type="text" name="name" class="form-ipt">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						电子邮箱 :
+					</span>
+					<span class="name-span">
+						<input type="text" name="name" class="form-ipt">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						固定电话 :
+					</span>
+					<span class="name-span">
+						<input type="text" name="" class="s-ipt"> 
+						<span class="phon-ipt"> - </span> 
+						<input type="text" name="name" class="m-ipt">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						所在地区 :
+					</span>
+					<span class="name-span">
+					</span>
+				</li>
+				<li>
+					<span class="form-val">
+						详细地址 :
+					</span>
+					<span class="name-span">
+						<input type="text" name="name" class="form-ipt" disabled="disabled" placeholder="填写详细的街道名及门牌号、楼宇名及房间号" style="background-color: #fff; width: 440px;">
+					</span>
+				</li>
+				<li class="form-ck">
+					<div class="ckbox">
+						<div class="ck-box">
+							<div class="ck" id="ck"></div>我同意
+						</div><a href="#">《药房网商城入驻用户服务协议》</a>
+					</div>
+				</li>
+				<li class="last-li">
+					<a href="javascript:;">立即注册</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/external/register_foot.js"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+.footer{
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+}
+.foot{
+	width: 990px;
+	margin: 0 auto;
+	text-align: center;
+	clear: both;
+	overflow: hidden;
+	padding: 10px 0;
+}
+.foot p{
+	color: #aaa;
+	line-height: 20px;
+	padding: 3px 0;
+}
+.foot a{
+	color: #aaa;
+}
+.foot p:first-child a{
+	margin: 0 9px;
+}
+.foot span{
+	margin-right: 12px;
+	display: inline-block;
+}
+.p-span img{
+	margin-bottom: -4px;
+}
+.foot a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1",
+    "livereload": "^0.6.2"
+  }
+}

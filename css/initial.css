@@ -1,7 +1,7 @@
  body,ul,li,ol,dl,dt,dd,input,header,footer,p,h1,h2,h3,h4,h5,h6,table,img,form{margin:0;padding: 0;}
  ul,li,ol{list-style: none;}
  a{text-decoration: none;color: #000;}
- input,a{outline: none;}
+ input,a,textarea{outline: none;}
  html,body{width: 100%;height: 100%}
  body{font-family: "微软雅黑";font-size: 12px;}
  img{border: none;}

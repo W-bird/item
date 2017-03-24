@@ -1,0 +1,146 @@
+.fixation-box{
+	position: fixed;
+	right: 2px;
+	top: 127px;
+	background-color: #fff;
+	width: 52px;
+	z-index: 999;
+}
+.i{
+	height: 30px;
+	width: 30px;
+	background-image: url(../../imgs/public/icons.png);
+	border: 1px solid #e5e5e5;
+	padding: 10px;
+	border-bottom: none;
+	position: relative;
+}
+.i1{
+	background-position: -91px -308px;
+	background-color: #0cb95f;
+	border-color: #0cb95f;
+	cursor: pointer;
+	position: 
+}
+.i1:hover,.i2:hover,.i3:hover,.i4:hover,.i5:hover,.i6:hover,.i7:hover{
+	background-image: none;
+	background-color: #0cb95f;
+	border-color: #0cb95f;
+}
+.i2{
+	background-position: -335px -307px;
+}
+.i3{
+	background-position: -138px -307px;
+}
+.i4{
+	background-position: -188px -307px;
+}
+.i5{
+    background-position: -121px -358px;
+}
+.i6{
+    background-position: -236px -307px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.i7{
+	background-position: -284px -307px;
+	border-bottom: 1px solid #e5e5e5;
+	display: none;
+}
+.t{
+	display: none;
+}
+.service{
+	position: absolute;
+	right: 51px;
+	top: -1px;
+	padding-right: 10px;
+	display: none;
+}
+.service-box{
+	width: 126px;
+	padding: 8px;
+	background-color: #0cb95f;
+}
+.service-box p{
+	color: #fff;
+	font-size: 12px;
+	position: relative;
+}
+.service-box p img{
+	position: absolute;
+	top: -4px; 
+	right: 2px;
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+}
+.service-a{
+	height: 35px;
+	text-align: center;
+	background-color: #fff;
+	margin-top: 8px;
+	padding: 10px 0;
+}
+.attention{
+	position: absolute;
+	right: 51px;
+	top: -103px;
+	background-color: #fff;
+	padding: 15px 20px;
+	color: #333;
+	border: 1px solid #e5e5e5;
+	line-height: 24px;
+	height: 198px;
+	width: 90px;
+	text-align: center;
+	display: none;
+}
+.attention-wx{
+	background: url(../../imgs/fixation/wxsmall.png);
+	width: 80px;
+	height: 80px;
+	margin-bottom: 5px;
+}
+.attention-wb{
+	background: url(../../imgs/public/icons.png) -364px -234px;
+	width: 28px;
+	height: 24px;
+	margin: 10px 31px;
+}
+.attention-a{
+	width: 66px;
+	display: block;
+	color: #fff;
+	background-color: #ee7076;
+	margin: 0 auto;
+}
+.app{
+	position: absolute;
+	top: -103px;
+	right: 51px;
+	padding: 15px 20px;
+	color: #333;
+	padding-top: 32px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	line-height: 24px;
+	height: 156px;
+	width: 90px;
+	text-align: center;
+	display: none;
+}
+.app-img{
+	background: url(../../imgs/fixation/app80right.png);
+	width: 80px;
+	height: 80px;
+	margin-bottom: 5px;
+}
+.app-a{
+	display: block;
+	width: 75px;
+	background: #0cb95f;
+	color: #fff;
+	margin: 5px auto 0;
+}

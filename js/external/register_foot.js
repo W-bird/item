@@ -1,0 +1,1 @@
+$("#footer").load("../html/external/register_foot.html");

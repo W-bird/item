@@ -26,7 +26,7 @@ body{
 	float: left;
 	margin-right: 5px;
 }
-.head_left li a,span{
+.head_left li a{
 	white-space: nowrap;
 	height: 40px;
 	line-height: 40px;
@@ -40,7 +40,7 @@ s{
 	border-right: 1px solid #e5e5e5;
 	margin:10px 10px 10px 10px;
 }
-.wx,.sj,.nav{
+.wx,.sj{
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -62,7 +62,10 @@ s{
 }
 .nav{
 	background: url(../../imgs/public/icons.png) -121px 1px;
-	float: left;
+	float: right;
+	width: 20px;
+	height: 20px;
+	margin: 10px 10px 10px 0;
 }
 .head .li_nav{
     width: 80px;

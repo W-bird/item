@@ -7,7 +7,8 @@ $("#head").load("../html/external/register_head.html", function() {
 		$("#logo-p").text("用户登录");
 	} else if (ntr == "sign-in.html") {
 		$("#logo-p").text("用户注册");
-	} else {
+	} else if (ntr == "firm-sign-in.html") {
+		$("#logo-p").text("企业注册");
 	}
 });
 
@@ -22,7 +23,7 @@ $("#head").on("mouseenter","#nav,.sub-nav", function() {
 		"borderRight":"1px solid #ccc",
 		"width":"79px",
 		"paddingLeft":"19px",
-		"height":"42px"
+		"height":"41px"
 	});
 });
 
