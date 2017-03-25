@@ -80,65 +80,81 @@ $("#header").on("mouseleave",".head-App", function() {
 	$(".left-APP").hide(100);
 })
 
+//二级导航滑过效果
+$("#header").on("mouseenter",".second-ul li", function() {
+	$(".second-ul").css({"background": "rgba(255,255,255,1)"});
+})
+$("#header").on("mouseleave",".second-ul li", function() {
+	$(".second-ul").css({"background": "rgba(255,255,255,0.8)"});
+})
 
+//中西药品滑过效果
 $("#header").on("mouseenter",".zxyp,.s1", function() {
 	$(".s1").show();
-	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+	$(".zxyp").css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
 })
 $("#header").on("mouseleave",".zxyp,.s1", function() {
 	$(".s1").hide();
-	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
+	$(".zxyp").css({"borderBottom":"1px dashed #e5e5e5","background":"rgba(255,255,255,0)","borderRight":"1px solid #e5e5e5"});
 })
 
+//医疗器械滑过效果
 $("#header").on("mouseenter",".ylqx,.s2", function() {
 	$(".s2").show();
-	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
-	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+	$(".ylqx").prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(".ylqx").css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
 })
 $("#header").on("mouseleave",".ylqx,.s2", function() {
 	$(".s2").hide();
-	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
-	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+	$(".ylqx").css({"borderBottom":"1px dashed #e5e5e5","background":"rgba(255,255,255,0)","borderRight":"1px solid #e5e5e5"});
+	$(".ylqx").prev().css({"borderBottom":"1px dashed #e5e5e5"});
 })
 
+//养生保健品滑过效果
 $("#header").on("mouseenter",".ysbj,.s3", function() {
 	$(".s3").show();
-	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
-	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+	$(".ysbj").prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(".ysbj").css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
 })
 $("#header").on("mouseleave",".ysbj,.s3", function() {
 	$(".s3").hide();
-	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
-	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+	$(".ysbj").css({"borderBottom":"1px dashed #e5e5e5","background":"rgba(255,255,255,0)","borderRight":"1px solid #e5e5e5"});
+	$(".ysbj").prev().css({"borderBottom":"1px dashed #e5e5e5"});
 })
 
+
+//计生用品滑过效果
 $("#header").on("mouseenter",".jsyp,.s4", function() {
 	$(".s4").show();
-	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
-	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+	$(".jsyp").prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(".jsyp").css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
 })
 $("#header").on("mouseleave",".jsyp,.s4", function() {
 	$(".s4").hide();
-	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
-	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+	$(".jsyp").css({"borderBottom":"1px dashed #e5e5e5","background":"rgba(255,255,255,0)","borderRight":"1px solid #e5e5e5"});
+	$(".jsyp").prev().css({"borderBottom":"1px dashed #e5e5e5"});
 })
 
+//中药饮片滑过效果
 $("#header").on("mouseenter",".zyyp,.s5", function() {
 	$(".s5").show();
-	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
-	$(this).css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
+	$(".zyyp").prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(".zyyp").css({"borderBottom":"1px solid #e5e5e5","borderRight":"0","background":"#f4f4f4"});
 })
 $("#header").on("mouseleave",".zyyp,.s5", function() {
 	$(".s5").hide();
-	$(this).css({"borderBottom":"1px dashed #e5e5e5"});
-	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+	$(".zyyp").css({"borderBottom":"1px dashed #e5e5e5","background":"rgba(255,255,255,0)","borderRight":"1px solid #e5e5e5"});
+	$(".zyyp").prev().css({"borderBottom":"1px dashed #e5e5e5"});
 })
 
+//美容护肤滑过效果
 $("#header").on("mouseenter",".mrhf,.s6", function() {
 	$(".s6").show();
-	$(this).prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(".mrhf").prev().css({"borderBottom":"1px solid #e5e5e5"});
+	$(".mrhf").css({"background":"#f4f4f4","borderRight":"0"});
 })
 $("#header").on("mouseleave",".mrhf,.s6", function() {
 	$(".s6").hide();
-	$(this).prev().css({"borderBottom":"1px dashed #e5e5e5"});
+	$(".mrhf").prev().css({"borderBottom":"1px dashed #e5e5e5"});
+	$(".mrhf").css({"background":"rgba(255,255,255,0)","borderRight":"1px solid #e5e5e5"});
 })
