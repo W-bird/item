@@ -1,0 +1,39 @@
+.footer{
+	width: 100%;
+	min-width: 1190px;
+	margin-top: 0;
+}
+.footer-head{
+	width: 100%;
+	padding: 20px 0;
+	height: 135px;
+	border-top: 1px solid #e8e8e8;
+	background: #f4f4f4;
+}
+.footer-box_one{
+	width: 1190px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.footer-box_one dl{
+	float: left;
+	width: 147px;
+}
+.footer-box_one dl dt{
+	color: #6a6a6a;
+	font-size: 14px;
+	line-height: 26px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+.footer-box_one dl dd{
+	margin-top: 6px;
+	text-align: left;
+}
+.footer-box_one dl dd a{
+	display: block;
+	overflow: hidden;
+	height: 26px;
+	color: #888;
+	text-align: left;
+	line-height: 26px;
+}

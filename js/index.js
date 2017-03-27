@@ -30,7 +30,7 @@ $(circles[4]).text("APP首次下单");
 
 timer = setInterval(move, 2000);	//自动轮播
 
-//
+//自动轮播函数
 function move() {
 	$(lis[currIndex]).fadeOut(800);
 	$(lis[nextIndex]).fadeIn(800);
@@ -82,4 +82,77 @@ $(".index-left").click(function() {
 		nextIndex = lis.length - 1;
 	}
 	move();
+})
+
+//滚动到位置时显示收缩固定收缩框
+$(window).scroll(function() {
+	var sorTop = $(this).scrollTop()
+	if (sorTop >= 900) {
+		$(".fixe-ss").slideDown(500);
+		$(".fixe-back").slideDown(500);
+	} else if (sorTop <= 900) {
+		$(".fixe-ss").slideUp(500);
+		$(".fixe-back").slideUp(500);
+	}
+});
+
+
+// tab 内部轮播
+var lis_odd = $(".content-left-ul li:odd"),
+	lis_even = $(".content-left-ul li:even"),
+	timer_2 = null;	//定时器
+timer_2 = setInterval(move_2, 3000);	//自动轮播
+//自动轮播函数
+function move_2() {
+	var _num = 0;
+	if (_num === 0) {
+		$(lis_odd).fadeOut(800);
+		$(lis_even).fadeIn(800);
+		_num = 1;
+		setTimeout(function() {
+			if (_num === 1) {
+				_num = 0;
+				$(lis_even).fadeOut(800);
+				$(lis_odd).fadeIn(800);
+			}
+		}, 1500)
+		
+	}
+}
+// 鼠标移上停止轮播
+$(".content-left-ul").mouseenter(function() {
+	clearInterval(timer_2);
+})
+// 鼠标移出开始轮播
+$(".content-left-ul").mouseleave(function() {
+	timer_2 = setInterval(move_2, 3000);
+})
+
+
+
+//评论纵向轮播
+var num = 1,
+	timer_3 = null,
+	liss = $(".discuss-ul li");
+
+function move_3(){
+	var	_top = -num * 220 + "px",
+		cloneLi = $(".discuss-ul li:nth-child(1), .discuss-ul li:nth-child(2)").clone();
+	$(".discuss-ul").animate({marginTop : _top}, 500);
+
+	setTimeout(function() {
+		$(".discuss-ul").append(cloneLi);
+		$(".discuss-ul li:lt(2)").remove();
+		$(".discuss-ul").css({marginTop:"0"})
+	}, 600)
+}
+
+timer_3 = setInterval(move_3, 2000)
+
+
+
+//鼠标滑过 tab 时改变a标签样式
+$(".title-right").on("mouseenter", "a", function() {
+	$(this).parent().children('a').removeClass('title-color')
+	$(this).addClass('title-color')
 })
