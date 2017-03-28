@@ -81,10 +81,10 @@ $("#header").on("mouseleave",".head-App", function() {
 })
 
 //二级导航滑过效果
-$("#header").on("mouseenter",".second-ul li", function() {
+$("#header").on("mouseenter",".second-ul li, .s", function() {
 	$(".second-ul").css({"background": "rgba(255,255,255,1)"});
 })
-$("#header").on("mouseleave",".second-ul li", function() {
+$("#header").on("mouseleave",".second-ul li, .s", function() {
 	$(".second-ul").css({"background": "rgba(255,255,255,0.8)"});
 })
 

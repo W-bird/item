@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.leftBox{
+				width: 419px;
+				height: 419px;
+				border: 1px solid #ccc;
+				float: left;
+				position: relative;
+				overflow: hidden;
+			}
+			.leftBox img{
+				width:100%;
+				height: 100%;
+				position: absolute;
+			}
+			.mask{
+				width: 100%;
+				height: 100%;
+				background: rgba(255,255,255,0);
+				position: absolute;
+			}
+			.lj{
+				width: 280px;
+				height: 219px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+				background: rgba(88,255,88,0.3);
+			}
+			.rigthBox{
+				width: 535px;
+				height: 419px;
+				overflow: hidden;
+				position: relative;
+			}
+			.rigthBox img{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="leftBox">
+			<img src="img/Z.jpg" alt="" />
+			<div class="mask"></div>
+			<div class="lj"></div>
+			<div style="position: fixed;bottom: 0;background: #000;height: 10px;"></div>
+		</div>
+		<div class="rigthBox">
+			<img class="datu" src="img/Z.jpg" alt="" />
+		</div>
+		<script>
+			var mask = document.getElementsByClassName("mask")[0];
+			var leftBox = document.getElementsByClassName("leftBox")[0];
+			var rightBox = document.getElementsByClassName("rigthBox")[0];
+			var lj = document.getElementsByClassName('lj')[0];
+			var maxImg = document.getElementsByClassName('datu')[0];
+			
+
+			mask.onmouseover = function(){
+				leftBox.onmousemove = function(e){
+					var e = e||window.event;
+					var posx = e.clientX-leftBox.offsetLeft-lj.offsetWidth/2;
+					var posy = e.clientY-leftBox.offsetTop-lj.offsetHeight/2;
+					console.log(posy+" "+posx)
+					if(posy<0){
+						posy=0;
+						
+					}
+					if(posy>leftBox.offsetHeight-lj.offsetHeight){
+						posy=leftBox.offsetHeight-lj.offsetHeight;
+					}
+					lj.style.cssText = "display: block;left:"+posx+"px ;top: "+posy+"px;";
+					var powx =(maxImg.offsetWidth-rightBox.offsetWidth)/(leftBox.offsetWidth-lj.offsetWidth);
+					var powy = (maxImg.offsetHeight-rightBox.offsetHeight)/(leftBox.offsetHeight-lj.offsetHeight);
+					console.log(powx+" "+powy)
+					maxImg.style.cssText = "left:"+posx*powx*-1+"px;top: "+posy*powy*-1+"px;";
+				}
+			}
+		</script>
+	</body>
+</html>

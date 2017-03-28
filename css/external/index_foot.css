@@ -37,3 +37,127 @@
 	text-align: left;
 	line-height: 26px;
 }
+.footer-box_one a:hover{
+	color: #0cb95f;
+	text-decoration: underline;
+}
+.footer-head .foot-App{
+	margin-right: 20px;
+}
+.foot-App dt{
+	text-align: center;
+}
+.footer-head .foot-App dd{
+	text-align: center;
+} 
+.footer-head .foot-App a{
+	height: auto;
+	text-align: center;
+}
+.footer-head .foot-last a{
+	height: auto;
+}
+.footer-head .foot-last{
+	width: 90px;
+}
+.footer-head .foot-last dt{
+	text-align: center;
+}
+.footer-head .foot-last dd{
+	text-align: center;
+}
+.footer-head .foot-last dd a{
+	text-align: center;
+}
+
+.footer-foot{
+	padding: 20px 0;
+	height: 198px;
+	background: #444a50;
+	color: #959aa0;
+}
+.footer-box-two{
+	width: 1190px;
+	margin: 0 auto;
+}
+.footer-box-two p{
+	padding: 8px 0;
+	color: #959aa0;
+}
+.foot-txt a{
+	color: #dee5ea;
+	padding: 0 13px;
+    font-family: Arial,"宋体";
+    font-size: 12px;
+}
+.foot-txt .txt-first-a{
+	padding-left: 0;
+}
+.foot-num{
+	clear: both;
+	overflow: hidden;
+}
+.foot-num span{
+	display: block;
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	margin-right: 18px;
+}
+.foot-num span a{
+	padding: 0 10px; 
+	color: #959aa0;
+}
+.foot-num .last-span img{
+	margin-bottom: -5px;
+	margin-right: 3px;
+}
+.foot-num .last-span a{
+	padding: 0;
+}
+.foot-copyright{
+	font-family: Tahoma,Helvetica,Arial,sans-serif;
+}
+.cert{
+	margin-top: 10px;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.cert span{
+	background-image: url(../../imgs/public/icon_rz.gif);
+	float: left;
+	display: block;
+	margin-right: 10px;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+}
+.cert span a{
+	display: block;
+	width: 100px;
+	height: 40px;
+}
+.gs{
+	background-position: 0 0;
+}
+.wj{
+	background-position: 0 -40px;
+}
+.bh{
+	background-position: 0 -80px;
+}
+.ls{
+	background-position: 0 -120px;
+}
+.zx{
+	background-position: 0 -160px;
+}
+.cx{
+	background-position: 0 -240px;
+}
+.rz{
+	background-position: 0 -200px;
+}
+.sw{
+	background-position: 0 -320px;
+}

@@ -751,3 +751,73 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+/* 侧边楼梯 */
+.fixe-stairs{
+	display: none;
+	position: fixed;
+	left: -20px;
+	top: 150px;
+	background: #fff;
+	width: 40px;
+	z-index: 9999;
+	border: 1px solid #e5e5e5;
+}
+.fixe-stairs li{
+	display: block;
+	background: #fff;
+	border-bottom: 1px solid #e5e5e5;
+	height: 78px;
+	width: 40px;
+}
+.fixe-stairs li a{
+	height: 78px;
+	width: 40px;
+	display: block;
+	position: relative;
+}
+.fixe-stairs li a span{
+	color: #999;
+	text-align: center;
+	display: block;
+	font-size: 12px;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	line-height: 16px;
+	padding: 0 6px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+.fixe-stairs li a i{
+	background-image: url(../imgs/public/icons.png);
+	display: block;
+	height: 24px;
+	width: 20px;
+	position: absolute;
+	top: 9px;
+	left: 10px;
+}
+.fixe-stairs .back{
+	background-color: #0cb95f;
+}
+.fixe-stairs li a .b1{
+	background-position: -172px -371px;
+}
+.fixe-stairs li a .b2{
+	background-position: -188px -396px;
+}
+.fixe-stairs li a .b3{
+	background-position: -206px -371px;
+}
+.fixe-stairs li a .b4{
+	background-position: -228px -371px;
+}
+.fixe-stairs li a .b5{
+	background-position: -251px -371px;
+}
+.fixe-stairs li a .b6{
+	background-position: -276px -371px;
+}
+.fixe-stairs li a .b7{
+	background-position: -300px -371px;
+}

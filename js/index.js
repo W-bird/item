@@ -84,15 +84,41 @@ $(".index-left").click(function() {
 	move();
 })
 
-//滚动到位置时显示收缩固定收缩框
+//滚动到位置时显示收缩固定收缩框和楼梯
 $(window).scroll(function() {
 	var sorTop = $(this).scrollTop()
 	if (sorTop >= 900) {
 		$(".fixe-ss").slideDown(500);
 		$(".fixe-back").slideDown(500);
+		$(".fixe-stairs").fadeIn(500);
 	} else if (sorTop <= 900) {
 		$(".fixe-ss").slideUp(500);
 		$(".fixe-back").slideUp(500);
+		$(".fixe-stairs").fadeOut(500);
+	}
+	if (sorTop > 900 && sorTop < 1400) {
+		$(".fixe-stairs").find('a').removeClass('back');
+		$(".fixe-stairs li:first-child a").addClass('back');
+	} else if (sorTop > 1400 && sorTop < 2000) {
+		$(".fixe-stairs").find('a').removeClass('back');
+		$(".fixe-stairs li:nth-child(2) a").addClass('back');
+	}else if (sorTop > 2000 && sorTop < 2600) {
+		$(".fixe-stairs").find('a').removeClass('back');
+		$(".fixe-stairs li:nth-child(3) a").addClass('back');
+	}else if (sorTop > 2600 && sorTop < 3300) {
+		$(".fixe-stairs").find('a').removeClass('back');
+		$(".fixe-stairs li:nth-child(4) a").addClass('back');
+	}else if (sorTop > 3300 && sorTop < 3900) {
+		$(".fixe-stairs").find('a').removeClass('back');
+		$(".fixe-stairs li:nth-child(5) a").addClass('back');
+	}else if (sorTop > 3900 && sorTop < 4500) {
+		$(".fixe-stairs").find('a').removeClass('back');
+		$(".fixe-stairs li:nth-child(6) a").addClass('back');
+	}else if (sorTop > 4500 && sorTop < 5100) {
+		$(".fixe-stairs").find('a').removeClass('back');
+		$(".fixe-stairs li:nth-child(7) a").addClass('back');
+	}else{
+		$(".fixe-stairs").find('a').removeClass('back');
 	}
 });
 
@@ -147,12 +173,13 @@ function move_3(){
 	}, 600)
 }
 
-timer_3 = setInterval(move_3, 2000)
-
+timer_3 = setInterval(move_3, 2000);
 
 
 //鼠标滑过 tab 时改变a标签样式
-$(".title-right").on("mouseenter", "a", function() {
+$("#title-right").on("mouseenter", "a", function() {
+	console.log(1)
+	console.log(this)
 	$(this).parent().children('a').removeClass('title-color')
 	$(this).addClass('title-color')
 })

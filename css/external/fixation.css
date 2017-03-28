@@ -1,7 +1,7 @@
 .fixation-box{
 	position: fixed;
 	right: 2px;
-	top: 127px;
+	top: 244px;
 	background-color: #fff;
 	width: 52px;
 	z-index: 999;
@@ -46,6 +46,22 @@
 	background-position: -284px -307px;
 	border-bottom: 1px solid #e5e5e5;
 	display: none;
+}
+.car-num{
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #e50000;
+	opacity: 0.8;
+	text-align: center;
+	border-radius: 50%;
+	right: 5px;
+	top: 5px;
+	font-size: 12px;
+	color: #fff;
+	line-height: 20px;
+    font-family: Arial;
 }
 .t{
 	display: none;
