@@ -45,13 +45,13 @@
 	</head>
 	<body>
 		<div class="leftBox">
-			<img src="img/Z.jpg" alt="" />
+			<img src="imgs/goods/ad5156de-c48b-49c2-98e8-f1b44f6281704946.jpg_syp.jpg" alt="" />
 			<div class="mask"></div>
 			<div class="lj"></div>
 			<div style="position: fixed;bottom: 0;background: #000;height: 10px;"></div>
 		</div>
 		<div class="rigthBox">
-			<img class="datu" src="img/Z.jpg" alt="" />
+			<img class="datu" src="imgs/goods/ad5156de-c48b-49c2-98e8-f1b44f6281704946.jpg_syp.jpg" alt="" />
 		</div>
 		<script>
 			var mask = document.getElementsByClassName("mask")[0];
@@ -73,6 +73,12 @@
 					}
 					if(posy>leftBox.offsetHeight-lj.offsetHeight){
 						posy=leftBox.offsetHeight-lj.offsetHeight;
+					}
+					if (posx < 0) {
+						posx = 0;
+					}
+					if (posx > leftBox.offsetWidth-lj.offsetWidth) {
+						posx = leftBox.offsetWidth-lj.offsetWidth
 					}
 					lj.style.cssText = "display: block;left:"+posx+"px ;top: "+posy+"px;";
 					var powx =(maxImg.offsetWidth-rightBox.offsetWidth)/(leftBox.offsetWidth-lj.offsetWidth);

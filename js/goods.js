@@ -7,55 +7,61 @@ $("#header").on("mouseleave", ".nav-link-first, .second-level", function() {
 });
 
 //放大镜
-var lenWidth = $(".select").width(),
-		lenHeight = $(".select").height(),
-		middleWidth = $(".big").width(),
-		middleHeight = $(".big").height(),
-		bigWidth = $(".img-big").width(),
-		bigHeight = $(".img-big").height(),
-		rateX = bigWidth / lenWidth,
-		rateY = bigHeight / lenHeight;
+// var selectBox =  document.getElementsByClassName("select")[0];
+// var bigBox = document.getElementsByClassName("big")[0];
 
-		var i = middleWidth * rateX ,
-			j = middleHeight * rateY ;
-$(".big").mousemove(function(e) {
-	
+// console.log(bigBox);
 
-		$(".big-image").css({width:i})
-		$(".big-image").css({height:j})
-			// 设置镜头在文档中的绝对位置，将光标指针保持在镜头中心
-			$(".select").css({
-				top:e.pageY - lenHeight *2,
-				left:e.pageX - lenWidth / 2
-			});
-			// 限定镜头可移动的范围
-			var _top = $(".select").offset().top,
-				_left = $(".select").offset().left;
-			if (_left < 0){
-				_left = 0;
-			} // 从左侧移出中图盒子范围
-				
+// bigBox.onmouseover = function() {
+// 	bigBox.onmousemove = function(e) {
+// 		e = e || window.event;
+// 		var _left = e.clientX-bigBox.offsetLeft-selectBox.offsetWidth/2;
+// 		var _top = e.clientY-bigBox.offsetTop-selectBox.offsetHeight/2;
+// 		// console.log(_left+ " " +_top)
+// 		if (_top < 0) {
+// 			_top = 0;
+// 		}
+// 		if (_top > (bigBox.offsetHeight - selectBox.offsetHeight)) {
+// 			_top = bigBox.offsetHeight - selectBox.offsetHeight;
+// 		}
+// 		if (_left < 0) {
+// 			_left = 0;
+// 		}
+// 		if (_left > (bigBox.offsetWidth - selectBox.offsetWidth)) {
+// 			left = bigBox.offsetWidth - selectBox.offsetWidth;
+// 		}
 
-			 if (_left > middleWidth - lenWidth){
-				_left = middleWidth - lenWidth;
-			} // 从右侧超出
-				
-			if (_top < 0) {// 从上侧移出中图盒子范围
-				_top = 0;
-			}
-			if (_top > middleHeight - lenHeight) 
-			{// 从下边超出
-				_top = middleHeight - lenHeight;
-			}
-			// 重新设置镜头定位位置
-			$(".select").offset({
-				top:_top,
-				left:_left
-			});
+// 		selectBox.style.cssText = "left:"+_left+"px;top: "+_top+"px;"
+// 	}
+// }
 
-			var z = _top * rateY ;
-			// 在放大效果区域定位大图的坐标
-			$(".big-image").offset({top:-_top * rateY/4});
-			$(".big-image").offset({left:-_left * rateX/4})  ;
-		
-});
+var leftBox = document.getElementsByClassName("big")[0];
+var rightBox = document.getElementsByClassName("img-big")[0];
+var lj = document.getElementsByClassName('select')[0];
+var maxImg = document.getElementsByClassName('big-image')[0];
+
+
+	leftBox.onmousemove = function(e){
+		var e = e||window.event;
+		var posx = e.clientX-leftBox.offsetLeft-lj.offsetWidth/2;
+		var posy = e.clientY-leftBox.offsetTop-lj.offsetHeight/2;
+		console.log(posy+" "+posx)
+		if(posy<0){
+			posy=0;
+			
+		}
+		if(posy>leftBox.offsetHeight-lj.offsetHeight){
+			posy=leftBox.offsetHeight-lj.offsetHeight;
+		}
+		if (posx < 0) {
+			posx = 0;
+		}
+		if (posx > leftBox.offsetWidth-lj.offsetWidth) {
+			posx = leftBox.offsetWidth-lj.offsetWidth
+		}
+		lj.style.cssText = "display: block;left:"+posx+"px ;top: "+posy+"px;";
+		var powx =(maxImg.offsetWidth-rightBox.offsetWidth)/(leftBox.offsetWidth-lj.offsetWidth);
+		var powy = (maxImg.offsetHeight-rightBox.offsetHeight)/(leftBox.offsetHeight-lj.offsetHeight);
+		console.log(powx+" "+powy)
+		maxImg.style.cssText = "left:"+posx*powx*-1+"px;top: "+posy*powy*-1+"px;";
+	}

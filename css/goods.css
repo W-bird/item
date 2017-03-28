@@ -101,10 +101,10 @@
 .img-big{
 	position: absolute;
 	z-index: 1001;
-	left: 376px;
+	left: 371px;
 	top: 0;
 	width: 480px;
-	height: 332px;
+	height: 369px;
 	overflow: hidden;
 	border: 1px solid #ccc;
 }
@@ -112,6 +112,4 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 720px;
-	height: 720px;
 }
