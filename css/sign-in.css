@@ -78,6 +78,7 @@
 	line-height: 40px;
 	display: inline-block;
 	text-align: right;
+	float: left;
 }
 .form-val label{
 	vertical-align: middle;
@@ -97,11 +98,12 @@
 }
 .name-span{
 	position: relative;
+	float: left;
 }
 .name-span i{
 	background-image: url(../imgs/public/icons.png);
 	position: absolute;
-	top: 0px;
+	top: 8px;
 	left: 10px;
 	display: block;
 	width: 18px;
@@ -184,4 +186,66 @@
 	font-size: 18px;
 	color: #fff;
 	background: #0cb95f;
+}
+
+/*提示信息*/
+.oninfo-hint{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	padding: 0 10px 0 25px;
+	font-size: 12px;
+	font-family: Arial,"宋体";
+	display: none;
+}
+.oninfo-hint i{
+	position: absolute;
+	top: 13px;
+	left: 5px;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-image: url(../imgs/public/icons.png);
+}
+.hintback-1{
+	background-position: -280px -120px;
+}
+.err{
+	color: #e16070;
+}
+.focus{
+	margin-top:7px;
+	margin-left:12px;
+	padding-left:10px;
+	height:28px;
+	border:1px solid #e5e5e5;
+	background:#f4f4f4;
+	line-height:28px;
+}
+.focus i{
+	top:8px;
+	left:-7px;
+	width:7px;
+	height:12px;
+	background-position:-429px -116px;
+}
+.ok i{
+	background-position:-297px -120px
+}
+
+/*选填框补充样式*/
+.elect{
+	float: left;
+}
+.name-span select{
+	font-size: 12px;
+	vertical-align: middle;
+	height: 38px;
+	min-width: 90px;
+}
+#city{
+	display: none;
+}
+#district{
+	display: none;
 }
