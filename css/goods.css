@@ -368,3 +368,22 @@
 	height: 75px;
 	border: 1px solid #e5e5e5;
 }
+
+/*添加到购物车*/
+.go_car{
+	position: absolute;
+	top: 430px;
+	right: 220px;
+	background: #fff;
+	color: #0cb95f;
+	border: 2px solid #0cb95f;
+	border-radius: 10px;
+	font-size: 16px;
+	width: 150px;
+	height: 50px;
+	line-height: 46px;
+	text-align: center;
+	z-index: 1000002000;
+	cursor: pointer;
+	outline: medium;
+}

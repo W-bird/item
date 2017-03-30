@@ -288,6 +288,10 @@
 .stair-content{
 	clear: both;
 	overflow: hidden;
+	position: relative;
+}
+.stair-content .contnet-right:last-child{
+	display: block;
 }
 .content-left{
 	width: 300px;
@@ -351,8 +355,11 @@
 }
 .contnet-right{
 	overflow: hidden;
-	display: block;
+	display: none;
 	border-top: 1px solid #e5e5e5;
+	position: absolute;
+	top: 0;
+	left: 300px;
 }
 .contnet-right li{
 	float: left;

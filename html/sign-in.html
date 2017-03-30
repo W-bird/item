@@ -39,7 +39,7 @@
 					</span>
 					<span class="name-span">
 						<i class="name-i"></i>
-						<input type="text" name="username" class="span-text">
+						<input type="text" name="username" class="span-text username">
 					</span>
 					<span class="err oninfo-hint">
 						<i class="hintback-1"></i>
@@ -67,7 +67,7 @@
 					</span>
 					<span class="name-span">
 						<i class="pwd-i"></i>
-						<input type="password" name="pwd2" class="span-text">
+						<input type="password" name="pwd2" class="span-text pwd2">
 					</span>
 					<span class="err oninfo-hint">
 						<i class="hintback-1"></i>
@@ -80,7 +80,7 @@
 						手机号码 :
 					</span>
 					<span class="name-span">
-						<input type="text" name="phone" class="form-ipt span-text">
+						<input type="text" name="phone" class="form-ipt span-text phone">
 					</span>
 					<span class="err oninfo-hint">
 						<i class="hintback-1"></i>
@@ -156,6 +156,10 @@
 						<select id="province"></select>
 						<select id="city"></select>
 						<select id="district"></select>
+						<span class="err oninfo-hint">
+							<i class="hintback-1"></i>
+							<span>请选择您的所在地区</span>
+						</span>
 					</span>
 				</li>
 				<li>
@@ -164,23 +168,33 @@
 					</span>
 					<span class="name-span">
 						<input type="text" name="name" class="form-ipt addr" disabled="disabled" placeholder="填写详细的街道名及门牌号、楼宇名及房间号" style="background-color: #fff; width: 440px;">
+						<span class="err oninfo-hint">
+							<i class="hintback-1"></i>
+							<span>请输入完整的详细地址信息，两边不能有空符号</span>
+						</span>
 					</span>
 				</li>
 				<li class="form-ck">
 					<div class="ckbox">
 						<div class="ck-box">
 							<div class="ck" id="ck"></div>我同意
-						</div><a href="#">《药房网商城入驻用户服务协议》</a>
+						</div>
+						<a href="#">《药房网商城入驻用户服务协议》</a>
 					</div>
 				</li>
 				<li class="last-li">
-					<a href="javascript:;">立即注册</a>
+					<button id="sub">立即注册</button>
 				</li>
 			</ul>
 		</div>
 	</div>
-
+	<!--引入注册事件-->
 	<script type="text/javascript" src="../js/sign-in.js"></script>
+	
+	<!--注册成功后跳转页面-->
+	<div class="skip">
+		<p>注册成功，页面将会在<span>3</span>秒后跳转到登录页面</p>
+	</div>
 
 	<!--引入脚部内容-->
 	<div id="footer"></div>

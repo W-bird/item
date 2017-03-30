@@ -1,5 +1,16 @@
 $("#header").load("../html/external/index_head.html");
 
+//读取cookie
+$.cookie.json = true; // 设置将字符串自动解析转换JS值
+var _username = $.cookie("username") || [];
+if (_username.length != 0) {
+	$(".head-register").children('a,b').hide();
+	console.log(1)
+	$(".wcom").show().children('a').text(_username[0].name);
+	console.log(2)
+}
+
+
 //鼠标移入网站导航显示
 $(".head").on("mouseenter","#nav,.sub-nav", function() {
 	$("#nav").css({"color":"#0cb95f"});

@@ -561,3 +561,16 @@ s{
 .recommend-ul li a{
 	color: #666;
 }
+
+/*读取cookie 样式补充*/
+.wcom{
+	display: none;
+	float: right;
+}
+.head-register b{
+	margin: 0 5px;
+	font-weight: normal;
+}
+.wcom a{
+	margin: 0 5px;
+}

@@ -111,8 +111,15 @@
 	text-align: center;
 	cursor: pointer;
 }
-.log a{
+.log button{
+	display: block;
+	width: 100%;
+	height: 100%;
 	color: #fff;
+	background-color: #0cb95f;
+	border:0;
+	font-size: 18px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
 }
 .in{
 	margin-bottom: 0;
@@ -145,13 +152,18 @@
 	margin-bottom: 10px;
 	color: #e16070;
 	display: none;
+	overflow: hidden;
+}
+.text span{
+	float: left;
 }
 .txt-span{
 	background: url(../imgs/public/icons.png)-280px -120px;
 	width: 15px;
 	height: 15px;
 	margin-right: 5px;
+	display: block;
 }
 .verify{
-	
+	display: none;
 }

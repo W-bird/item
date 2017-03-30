@@ -6,35 +6,15 @@ $("#header").on("mouseleave", ".nav-link-first, .second-level", function() {
 	$(".second-level").hide()
 });
 
+//读取cookie
+$.cookie.json = true; // 设置将字符串自动解析转换JS值
+var _username = $.cookie("username") || [];
+if (_username.length != 0) {
+	$(".head-register").children('a,b').hide();
+	$(".wcom").show().children('a').text(_username[0].name);
+}
+
 //放大镜
-// var selectBox =  document.getElementsByClassName("select")[0];
-// var bigBox = document.getElementsByClassName("big")[0];
-
-// console.log(bigBox);
-
-// bigBox.onmouseover = function() {
-// 	bigBox.onmousemove = function(e) {
-// 		e = e || window.event;
-// 		var _left = e.clientX-bigBox.offsetLeft-selectBox.offsetWidth/2;
-// 		var _top = e.clientY-bigBox.offsetTop-selectBox.offsetHeight/2;
-// 		// console.log(_left+ " " +_top)
-// 		if (_top < 0) {
-// 			_top = 0;
-// 		}
-// 		if (_top > (bigBox.offsetHeight - selectBox.offsetHeight)) {
-// 			_top = bigBox.offsetHeight - selectBox.offsetHeight;
-// 		}
-// 		if (_left < 0) {
-// 			_left = 0;
-// 		}
-// 		if (_left > (bigBox.offsetWidth - selectBox.offsetWidth)) {
-// 			left = bigBox.offsetWidth - selectBox.offsetWidth;
-// 		}
-
-// 		selectBox.style.cssText = "left:"+_left+"px;top: "+_top+"px;"
-// 	}
-// }
-
 var leftBox = document.getElementsByClassName("big")[0];
 var rightBox = document.getElementsByClassName("img-big")[0];
 var lj = document.getElementsByClassName('select')[0];
@@ -73,3 +53,28 @@ leftBox.onmouseleave = function() {
 	bigBox.style.display = "none";
 	lj.style.cssText = "display: none;";
 }
+
+
+//添加到购物车效果
+$(function(){
+	$(".go_car").click(function(e){
+		$('body').animate({scrollTop:0}, 0);
+		//飞入购物车
+		var $fly = $("<img src='../imgs/goods/ad5156de-c48b-49c2-98e8-f1b44f6281704946.jpg_syp.jpg' style='width:30px; height:30px; position:absolute'>");
+		var cartOffset = $("#fixation").find(".i2").offset();
+
+		$fly.fly({
+			start : {
+				top : e.pageY,
+				left : e.pageX
+			},
+			end : {
+				top : cartOffset.top,
+				left : cartOffset.left,
+				width : 10,
+				height : 10
+			}
+		});
+
+	})
+});

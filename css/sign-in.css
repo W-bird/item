@@ -177,7 +177,7 @@
 .form .last-li{
 	padding: 0 0 0 180px;
 }
-.last-li a{
+.last-li button{
 	display: block;
 	text-align: center;
 	width: 320px;
@@ -186,6 +186,7 @@
 	font-size: 18px;
 	color: #fff;
 	background: #0cb95f;
+	border: 0;
 }
 
 /*提示信息*/
@@ -243,9 +244,38 @@
 	height: 38px;
 	min-width: 90px;
 }
+#province{
+	float: left;
+}
 #city{
 	display: none;
+	float: left;
+	margin: 0 10px;
 }
 #district{
 	display: none;
+	float: left;
+}
+.addr{
+	float: left;
+}
+.ck-back{
+	background: url(../imgs/public/icons.png) -62px -28px;
+}
+
+.skip{
+	margin: 100px auto;
+	width: 1190px;
+	height: 50px;
+	line-height: 50px;
+	display: none;
+}
+.skip p{
+	text-align: center;
+	color: #0cb95f;
+	font-size: 20px;
+}
+.skip p span{
+	color: red;
+	margin: 0 5px;
 }

@@ -176,10 +176,71 @@ function move_3(){
 timer_3 = setInterval(move_3, 2000);
 
 
+
+// /*tab区 轮播*/
+var divs = $(".tab-div"),
+	lias = $(".tab-ul li"),
+	_name = 1,
+	currIndex_4 = 0,
+	nextIndex_4 = 1,
+	timer_4 = null;
+
+//开启轮播
+timer_4 = setInterval(move_4, 2000)
+
+//轮播函数
+function move_4() {
+	$(divs[currIndex_4]).fadeOut(800);
+	$(divs[nextIndex_4]).fadeIn(800);
+
+	$(lias[currIndex_4]).children('a').removeClass('tab-color');
+	$(lias[nextIndex_4]).children('a').addClass('tab-color');
+
+	currIndex_4 = nextIndex_4;
+	nextIndex_4++;
+
+	if (nextIndex_4 >= divs.length) {
+		nextIndex_4 = 0;
+	}
+}
+
+//鼠标滑过标签
+$(lias).mouseenter(function() {
+	var _index = $(this).attr("name");
+	nextIndex_4 = _index -1;
+	move_4()
+});
+
+//鼠标移入停止轮播
+$(".tab-one").mouseenter(function() {
+	clearInterval(timer_4);
+});
+
+//鼠标移除开始轮播
+$(".tab-one").mouseleave(function() {
+	timer_4 = setInterval(move_4, 2000)
+});
+
+
+
 //鼠标滑过 tab 时改变a标签样式
-$("#title-right").on("mouseenter", "a", function() {
-	console.log(1)
-	console.log(this)
+$(".title-right").on("mouseenter", "a", function() {
+	var _right = $(this).parents(".tab").find('.contnet-right');
+	$(_right).fadeOut(400);
 	$(this).parent().children('a').removeClass('title-color')
 	$(this).addClass('title-color')
+	console.log(_right)
+	var _a = $(this).attr("name")
+	$(_right[_a]).fadeIn(400);
+})
+
+
+$(function(){
+	//读取cookie
+	$.cookie.json = true; // 设置将字符串自动解析转换JS值
+	var _username = $.cookie("username") || [];
+	if (_username.length != 0) {
+		$(".head-register").children('a,b').hide();
+		$(".wcom").show().children('a').text(_username[0].name);
+	}
 })
