@@ -1,0 +1,391 @@
+/*更改头尾部分样式*/
+.stair-nav{
+	background-color: #0cb95f;
+}
+.stair-nav .nav-container .nav-link-first{
+	background-color: #0aa454;
+}
+.stair-nav .nav-link a:hover{
+	color: #fff;
+}
+.nav-link a{
+	color: #fff;
+}
+.second-level{
+	display: none;
+}
+.nav-container .nav-link .nav-new{
+	color: #fff;
+}
+.nav-container .nav-link .nav-new .new-i{
+	top: -17px;
+}
+
+
+/*商品内容*/
+.goods-box a:hover{
+	color: #0cd95f;
+}
+/*商品路径*/
+.goods-box{
+	width: 1190px;
+	margin: 0 auto;
+	text-align: left;
+}
+.goods-src{
+	padding: 15px 0;
+	min-height: 24px;
+	color: #aaa;
+	text-align: left;
+	line-height: 24px;
+}
+.goods-src a{
+	float: left;
+	display: block;
+}
+.goods-src i{
+	float: left;
+	display: block;
+	margin: 3px 12px 0;
+	width: 8px;
+	height: 18px;
+	background: url(../imgs/public/icons.png) -30px -23px;
+}
+.goods-src strong{
+	color: #666;
+	font-weight: normal;
+}
+.goods-src a:hover{
+	text-decoration: underline;
+}
+
+/*商品详情*/
+.details{
+	overflow: hidden;
+	clear: both;
+}
+.details-left{
+	float: left;
+	width: 370px;
+	position: relative;
+}
+.big{
+	width: 369px;
+	height: 369px;
+	display: block;
+	position: relative;
+	border: 1px solid rgb(229, 229, 229);
+    cursor: crosshair;
+}
+.big img{
+	width: 360px;
+	height: 360px;
+	padding: 3px;
+}
+.img-txt{
+	bottom: 0;
+	color: rgb(153, 153, 153);
+	left: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 32px;
+	background-color: #fff;
+	position: absolute;
+	z-index: 1000;
+}
+.select{
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	height: 166px;
+	width: 240px;
+	border: 1px solid #ccc;
+	background-color: rgba(255,255,255,0.6);
+	z-index: 999;
+	display: none;
+}
+.mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0);
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 9990;
+}
+.img-big{
+	position: absolute;
+	z-index: 1001;
+	left: 371px;
+	top: 0;
+	width: 480px;
+	height: 369px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	display: none;
+}
+.img-big img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 800px;
+	height: 800px;
+}
+.samll-imgbox{
+	position: relative;
+	overflow: hidden;
+	margin: 10px 0;
+	height: 66px;
+}
+.samll-imgbox div{
+	width: 562px;
+	left: 0px;
+}
+.samll-imgbox div a{
+	margin-right: 10px;
+	float: left;
+	display: block;
+	width: 64px;
+	height: 64px;
+	border: 1px solid #e5e5e5;
+}
+.samll-imgbox div a img{
+	margin: 2px;
+	width: 60px;
+	height: 60px;
+}
+/*右侧内容*/
+.details-right{
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	width: 800px;
+}
+.right-h1{
+	margin-bottom: 20px;
+	padding: 0 20px 0 0;
+	font-size: 18px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+.right-h1 i{
+	float: left;
+	margin-top: 6px; 
+	margin-right: 3px;
+	display: inline-block;
+	width: 33px;
+	height: 16px;
+	background: url(../imgs/public/icons.png) -220px -26px;
+	overflow: hidden;
+}
+.right-h1 strong{
+	float: left;
+	overflow: hidden;
+	width: 740px;
+	white-space: nowrap;
+	font-weight: normal;
+}
+.jg{
+	width: 800px;
+	background-color: #f4f4f4;
+	float: left;
+	line-height: 24px;
+}
+.jg dt{
+	padding: 18px 0;
+	height: 24px;
+	float: left;
+	width: 64px;
+	border: 0;
+	color: #999;
+	text-align: center; 
+}
+.jg dd{
+	padding: 18px 0;
+	padding-left: 20px;
+	height: 24px;
+}
+.jg-money{
+	margin-right: 20px;
+	font-family: "\534E\6587\7EC6\9ED1",Arial;
+	font-size: 16px;
+	color: #e50000;
+	font-style: normal;
+	float: left;
+}
+.jg-money label{
+	font-size: 28px;
+}
+.jg-bj{
+	float: left;
+	display: block;
+	padding: 0 15px;
+	border: 1px solid #0cd95f;
+	color: #0cd95f;
+	text-align: center;
+}
+.jg-bj b{
+	margin: 0 3px;
+	font-weight: normal;
+}
+.jrtdg{
+	position: absolute;
+	top: 43px;
+	right: 10px;
+	width: 108px;
+	height: 24px;
+	border: 1px solid #ccc;
+	background-color: #f4f4f4;
+	text-align: center;
+	line-height: 24px;
+}
+.apped{
+	padding: 10px 0;
+	clear: both;
+}
+.apped a{
+	background: #e4393c url(../imgs/goods/sm.png) no-repeat 10px center;
+	color: #fff;
+	line-height: 22px;
+	height: 22px;
+	padding: 0 10px 0 26px;
+	display: inline-block; 
+}
+.apped a:hover{
+	color: #fff;
+}
+
+.spxq{
+	float: left;
+	width: 640px;
+	line-height: 24px;
+}
+.spxq dt{
+	float: left;
+	padding: 13px 0;
+	width: 64px;
+	color: #999;
+	text-align: center;
+	height: 24px;
+}
+.spxq dd{
+	float: left;
+	padding: 13px 0 13px 29px;
+	height: 24px;
+	position: relative;
+}
+.guige{
+	border-bottom: 1px dashed #e5e5e5;
+}
+.ggnr{
+	width: 270px;
+	border-bottom: 1px dashed #e5e5e5;
+}
+.ggnr2{
+	width: 184px;
+}
+.ggnr strong{
+	font-weight: normal;
+}
+.ggnr3{
+	width: 547px;
+}
+.ggnr3 img{
+	vertical-align: middle;
+}
+.ggnr3 a{
+	color: #999;
+}
+.ggnr3 a:hover{
+	text-decoration: underline;
+}
+.ggnr3 strong{
+	font-weight: normal;
+}
+.fx{
+	padding: 5px 0;
+	height: 28px;
+	clear: both;
+}
+.ids{
+	float: left;
+	margin-top: 5px;
+}
+.fxd{
+	float: left;
+	display: block;
+	margin-left: 20px;
+}
+.fxd a{
+	float: left;
+	font-size: 12px;
+	padding-left: 17px;
+	line-height: 16px;
+	height: 16px;
+	background-image: url(../imgs/public/icons_0_16.png);
+	background-repeat: no-repeat;
+	margin: 6px 6px 6px 0;
+}
+
+.fx-wx{
+	background-position: 0 -1612px;
+}
+.fx-qq{
+	background-position: 0 -52px;
+}
+.fx-wb{
+	background-position: 0 -104px;
+}
+.fx-txwb{
+	background-position: 0 -260px;
+}
+
+/*手机比价*/
+.phone-bj{
+	position: absolute;
+	top: 100px;
+	right: 0;
+	width: 119px;
+	height: 160px;
+	background-color: #fff;
+}
+.phone-bj div{
+	padding: 4px 0 4px 42px;
+	background-color: #0cb95f;
+	color: #fff;
+	line-height: 18px;
+	width: 77px;
+}
+.phone-bj div span{
+	position: absolute;
+	top: 7px;
+	left: 16px;
+	width: 20px;
+	height: 32px;
+	background: url(../imgs/public/icons.png) -57px -46px;
+}
+.phone-bj img{
+	padding: 21px;
+	width: 75px;
+	height: 75px;
+	border: 1px solid #e5e5e5;
+}
+
+/*添加到购物车*/
+.go_car{
+	position: absolute;
+	top: 430px;
+	right: 220px;
+	background: #fff;
+	color: #0cb95f;
+	border: 2px solid #0cb95f;
+	border-radius: 10px;
+	font-size: 16px;
+	width: 150px;
+	height: 50px;
+	line-height: 46px;
+	text-align: center;
+	z-index: 1000002000;
+	cursor: pointer;
+	outline: medium;
+}

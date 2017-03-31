@@ -174,9 +174,6 @@ a{
 .goodlist li {
     height: 296px;
 }
-.goodlist li.hover .info{
-	height: 419px;
-}
 .goodlist li {
     float: left;
     margin-right: 20px;
@@ -451,4 +448,7 @@ a img{
     margin: 0 10px;
     line-height: 22px;
     margin: 6px 10px;
+}
+.goodlist li.last {
+    margin-right: 0;
 }
