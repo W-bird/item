@@ -604,7 +604,7 @@ s{
 	background-image: url(../imgs/car/step.png);
 }
 .bgPs1{
-	background-position: -29px -14px;
+	background-position: -29px -96px;
 }
 
 
@@ -668,7 +668,7 @@ s{
 
 /*购物车有商品*/
 .goods{
-	width: 1190px;
+	width: 900px;
 	margin: 50px auto 80px;
 	position: relative;
 }
@@ -692,51 +692,57 @@ s{
 }
 .goods-info{
 	background: #fff;
-	border: 1px solid #ccc;
-	border-top: 0;
 	width: 100%;
 	overflow: hidden;
 }
-.goods-info li{
-	float: left;
-	width: 25%;
-	text-align: center;
-	height: 60px;
-	line-height: 60px;
-	font-size: 16px;
-	font-family:  "\5FAE\8F6F\96C5\9ED1";
-	position: relative;
-}
-.goods-info li:first-child img{
+.goods-info .info-img{
 	width: 50px;
 	height: 50px;
 	vertical-align: middle;
+	float: left;
 }
-.goods-info li:first-child span{
+.goods-info .info-name{
 	position: absolute;
-	top: -5px;
+	top: 8px;
 	font-size: 14px;
-
+	float: left;
 }
-.goods-info li:first-child .last-span{
+.goods-info .info-gg{
 	position: absolute;
-	top: 15px;
+	top: 33px;
 	font-size: 12px;
 	color: #ccc;
+	float: left;
 }
-.goods-info li:nth-child(2){
+.goods-info .x{
+	font-size: 16px;
+	margin-left: 200px;
+	margin-top: 30px;
+	float: left;
+	color: #0cb95f;
+}
+.info-num{
+	margin-left: 10px;
+	font-size: 35px;
+	margin-top: 10px;
+	display: block;
+	float: left;
 	color: #e50000;
 }
-
-.all{
+.info-all{
 	float: left;
-	margin-left: 10px;
+	margin-left: 200px;
+	font-size: 16px;
+	margin-top: 30px;
+	color: #0cb95f;
 }
-#one{
-	float: left;
+.info-money{
 	margin-left: 10px;
+	font-size: 35px;
+	margin-top: 10px;
 	display: block;
-	margin-top: 23px
+	float: left;
+	color: #e50000;
 }
 
 .goods button{
@@ -744,8 +750,24 @@ s{
 	bottom: -50px;
 	right: 10px;
 }
-.goods .goods-remove{
+.goods .gyes{
 	right: 90px;
+}
+
+/*购买完成*/
+
+.ok{
+	width: 1190px;
+	margin: 100px auto;
+	font-size: 20px;
+	text-align: center;
+}
+.ok a{
+	color: #0cb95f;;
+	margin: 0 15px;
+}
+.ok a:hover{
+	text-decoration: underline;
 }
 
 .quit{

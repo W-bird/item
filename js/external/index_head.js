@@ -7,6 +7,7 @@ var _username = $.cookie("username") || [];
 if (_username.length != 0) {
 	$(".head-register").children('a,b').hide();
 	$(".wcom").show().children('a').text(_username[0].name);
+	$(".head-register").find(".quit").show();
 }
 
 
@@ -170,3 +171,17 @@ $("#header").on("mouseleave",".mrhf,.s6", function() {
 })
 
 
+$("#header").on("click",".quit", function() {
+	var _username = $.cookie("username") || [];
+	// 删除cookie
+	_username.splice(_username, 1);
+	// 覆盖保存回cookie中
+	$.cookie("username", _username, {expires:7, path:"/"});
+	// 配置读取或保存cookie时使用JSON格式
+	$.cookie.json = true;
+	
+	// 将数据存入cookie 
+	$.cookie("username", _username, {expires:7, path:"/"});
+
+	window.location = "index.html"
+});

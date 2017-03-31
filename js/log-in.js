@@ -19,19 +19,34 @@ $(".log").click(function() {
 					// if (_ckd) {
 					// 	num = 7;
 					// }
-					var _username = $.cookie("username") || [];
-					_username.push({name:name});
-
-					// 配置读取或保存cookie时使用JSON格式
 					$.cookie.json = true;
-					
-					if (_username.length >= 2) {
-						_username.shift();
+					var _username = $.cookie("username") || [];
+					console.log(_username)
+					console.log(typeof _username)
+					console.log(!(_username != ""))
+					if (!(_username != "")) {
+						_username.push({name:name});
+						// 配置读取或保存cookie时使用JSON格式
+						$.cookie.json = true;
+						
+						// 将数据存入cookie 
+						$.cookie("username", _username, {expires:7, path:"/"});
+						//跳转到首页
+						window.location = "index.html";
+					} else if(name !== _username[0].name){
+						// 删除cookie
+						_username.splice(0,1)
+						_username.push({name:name});
+						// 配置读取或保存cookie时使用JSON格式
+						$.cookie.json = true;
+						
+						// 将数据存入cookie 
+						$.cookie("username", _username, {expires:7, path:"/"});
+						//跳转到首页
+						window.location = "index.html";
+					} else{
+						window.location = "index.html";
 					}
-					// 将数据存入cookie 
-					$.cookie("username", _username, {expires:7, path:"/"});
-					//跳转到首页
-					window.location = "index.html";
 				} else{
 					$(".text").show();
 					$(".text").children('span:last-child').text("用户名或密码错误");

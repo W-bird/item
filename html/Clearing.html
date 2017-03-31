@@ -8,7 +8,7 @@
 	<!--引入尾样式-->
 	<link rel="stylesheet" type="text/css" href="../css/external/index_foot.css">
 	<!--引入注册页面样式-->
-	<link rel="stylesheet" type="text/css" href="../css/car.css">
+	<link rel="stylesheet" type="text/css" href="../css/Clearing.css">
 	<!--引入固定侧边栏样式-->
 	<link rel="stylesheet" type="text/css" href="../css/external/fixation.css">
 	<!--引入JQuery库-->
@@ -104,57 +104,33 @@
 	<div class="logo-big">
 		<div class="logo">
 			<a href="index.html" class="logo-a"></a>
-			<p class="logo-p" id="logo-p">需求清单</p>
+			<p class="logo-p" id="logo-p">核对信息</p>
 			<div class="condition bgPs1"></div>
 		</div>
 	</div>
 	
-	
-	<div class="goods-car">
-		<!--没有商品显示内容-->
-		<div class="car-content" style="display: none;">
-			<div class="hint">
-				<span></span>
-				<p>您的需求清单还是空的，药房网商城恭喜您身体健康！</p>
-				<p>如果您有时间，可以随便逛逛！</p>
-				<a href="index.html">去逛一下</a>
-			</div>
-		</div>
-
+	<!--结算-->
+	<div class="goods-car" style="display: none;">
 		<div class="goods">
-			<ul class="goods-head">
-				<li>
-					<span class="all">
-						<input type="checkbox" name="" id="all"><label for="all">全选</label>
-					</span>
-					商品信息
-				</li>
-				<li>商品单价</li>
-				<li>商品数量</li>
-				<li>合计</li>
-			</ul>
 			<div class="goods-all">
-				<ul class="goods-info">
-					<li>
-						<img src="">
-						<span class="first-span"></span>
-						<span class="last-span"></span>
-						<input type="checkbox" name="yes" id="one">
-					</li>
-					<li>
-						￥<span></span>
-					</li>
-					<li>
-						<span></span>
-					</li>
-					<li>
-						￥<span></span>
-					</li>
-				</ul>
-				<button class="goods-remove">删除选中</button>
-				<button class="goods-goBuy">去结算</button>
+				<div class="goods-info">
+					<img src="" class="info-img">
+					<span class="info-name"></span>
+					<span class="info-gg"></span>
+					<span class="x">X</span>
+					<span class="info-num"></span>
+					<span class="info-all">合计：￥</span>
+					<span class="info-money"></span>
+				</div>
+				<button class="gyes">确定</button>
+				<button class="gno">取消</button>
 			</div>
 		</div>
+	</div>
+
+	<!--结算完成-->
+	<div class="ok">
+		<p>购买完成！<a href="index.html">前往首页</a> <a href="car.html">前往购物车</a></p>
 	</div>
 
 
@@ -164,6 +140,6 @@
 	<div id="index_foot"></div>
 	<script type="text/javascript" src="../js/external/index_foot.js"></script>
 
-	<script type="text/javascript" src="../js/car.js"></script>
+	<script type="text/javascript" src="../js/Clearing.js"></script>
 </body>
 </html>

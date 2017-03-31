@@ -1,5 +1,3 @@
-$("#header").load("../html/external/index_head.html");
-
 //读取登录用户cookie
 $.cookie.json = true; // 设置将字符串自动解析转换JS值
 var _username = $.cookie("username") || [];
@@ -12,23 +10,14 @@ if (_username.length != 0) {
 // 从cookie中读取保存选购商品的存储结构
 var _goods = $.cookie("goods") || [];
 if(_goods != ''){
-	$(".goods").show();
-	$("#fixation").find(".i2").children('b').text(_goods[0].amount);
-	// console.log(_goods[0])
-	// console.log(zj)
-	
-	$(".goods-info li:first-child").children('img').attr("src",_goods[0]._goodsImg);
-	var goodName = $(".goods-info li:first-child").children('span')[0],
-		goodNorms = $(".goods-info li:first-child").children('span')[1];
-	$(goodName).text(_goods[0]._goodName)
-	$(goodNorms).text(_goods[0]._goodNorms)
-	$(".goods-info li:nth-child(2)").children('span').text(_goods[0]._goodPrice)
-	$(".goods-info li:nth-child(3)").children('span').text(_goods[0].amount)
+	$(".info-num").text(_goods[0].amount);
 	var zj = _goods[0]._goodPrice * _goods[0].amount;
-	$(".goods-info li:nth-child(4)").children('span').text(zj)
-} else{
-	$(".goods").hide();
-	$(".car-content").show();
+	$(".info-money").text(zj)
+	$(".info-name").text(_goods[0]._goodName);
+	$(".info-gg").text(_goods[0]._goodNorms);
+	$(".info-img").attr("src",_goods[0]._goodsImg);
+	$(".goods-car").show();
+	$(".ok").hide();
 }
 
 
@@ -112,43 +101,31 @@ $(".head").on("mouseleave",".head-App", function() {
 	$(".left-APP").hide(100);
 })
 
-
-$("#all").click(function() {
-	var ck = $("#all").prop("checked");
-	$(".goods-all").find("input").prop("checked",ck)
-	// console.log($(".goods-all").find("input").css("chexked",true))
-});
-
-/* 删除所在行数据 */
-$(".goods-remove").click(function(){
-	// 获取待删除的商品对象
-	var _good = $(".goods-all").find("input:checkbox[name='yes']:checked").parent().children(".first-span").text();
-	
-	// 获取删除的商品对象在数组中的索引
-	var index = $.inArray(_good, _goods[0]._goodName);
-	
-	// 从数组中删除商品
-	if (_good == _goods[0]._goodName) {
-		_goods.splice(_good, 1);
-		// 覆盖保存回cookie中
-		$.cookie("goods", _goods, {expires:7, path:"/"});
-
-		// 将页面当前行删除
-		$(this).parents(".goods-all").remove();
-		$(".goods").hide();
-		$(".car-content").show();
-	}
-
-	return false; // 阻止事件冒泡与阻止默认行为
-});
-
-$(".goods-goBuy").click(function() {
-	// 从cookie中读取保存选购商品的存储结构
+//点击确定按钮，删除cookie，显示购买完成
+$(".gyes").click(function() {
 	var _goods = $.cookie("goods") || [];
-	if(_goods != ''){
-		window.location = "Clearing.html";
+	// 删除cookie
+	_goods.splice(_goods, 1);
+	// 覆盖保存回cookie中
+	$.cookie("goods", _goods, {expires:7, path:"/"});
+	// 配置读取或保存cookie时使用JSON格式
+	$.cookie.json = true;
+	
+	// 将数据存入cookie 
+	$.cookie("goods", _goods, {expires:7, path:"/"});
+
+
+	$(".goods-car").hide();
+	$(".ok").show();
+});
+
+//点击取消，弹框，确定返回购物车
+$(".gno").click(function() {
+	if(confirm("确定取消购买，并返回购物车？")){
+		window.location = "car.html";
 	}
 });
+
 
 $(".quit").click(function() {
 	console.log(8)
