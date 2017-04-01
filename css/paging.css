@@ -452,3 +452,55 @@ a img{
 .goodlist li.last {
     margin-right: 0;
 }
+.pager {
+    margin: 10px 0;
+    font-family: arial;
+    overflow: hidden;
+}
+.pager .list {
+    float: right;
+    text-align: center;
+}
+.pager .list a.noprev {
+    padding: 0 20px;
+    width: 40px;
+    border: 1px solid #f0f0f0;
+    background-color: #fcfcfc;
+    color: #999;
+}
+.cont-right .pager .current {
+    border: 1px solid #0cb95f;
+    background: #0cb95f;
+    color: #fff;
+}
+.pager span.current {
+    border: 1px solid #0cb95f;
+    background: #0cb95f;
+    color: #fff;
+}
+.pager span {
+    float: left;
+    display: block;
+    margin: 1px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #f0f0f0;
+    background-color: #fcfcfc;
+    line-height: 35px;
+    cursor: default;
+}
+.pager .list a {
+    float: left;
+    display: block;
+    margin: 1px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #f0f0f0;
+    background-color: #fcfcfc;
+    text-decoration: none;
+    line-height: 35px;
+}
+.pager .list a.next, .pager .list a.prev {
+    padding: 0 20px;
+    width: 40px;
+}

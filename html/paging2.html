@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!--引入初始化样式-->
+	<link rel="stylesheet" type="text/css" href="../css/initial.css">
+	<!--引入商品分页样式-->
+	<link rel="stylesheet" type="text/css" href="../css/paging.css">
+	<!--引入头尾样式-->
+	<link rel="stylesheet" type="text/css" href="../css/external/index_head.css">
+	<link rel="stylesheet" type="text/css" href="../css/external/index_foot.css">
+	<!--引入固定侧边栏样式-->
+	<link rel="stylesheet" type="text/css" href="../css/external/fixation.css">
+	<!--引入JQuery库-->
+	<script type="text/javascript" src="../JQku/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="../JQku/jquery.fly.min.js"></script>
+	<script type="text/javascript" src="../JQku/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../JQku/template.js"></script>
+</head>
+<body>
+	<!--引入固定侧边栏内容-->
+	<div id="fixation"></div>
+	<script type="text/javascript" src="../js/external/fixation.js"></script>
+	
+	<!--引入首页头部内容-->
+	<div id="header"></div>
+	<script type="text/javascript" src="../js/external/index_head.js"></script>
+	
+	<div class="box">
+		<div class="cont-left">
+			<div class="block">
+				<h4 class="nb">所有科目</h4>
+				<ul class="nb-ul">
+					<li class="hover">
+						<h5>
+							<a href="javascript:;">中西药品</a>
+							<i></i>
+						</h5>
+						<div class="items">
+							<a href="javascript:;" class="cur">胃肠用药</a>
+							<a href="javascript:;">呼吸系统</a>
+							<a href="javascript:;">心脑血管</a>
+							<a href="javascript:;">家庭常用</a>
+							<a href="javascript:;">风湿骨科</a>
+							<a href="javascript:;">抗肿瘤药</a>
+							<a href="javascript:;">皮肤科药</a>
+							<a href="javascript:;">五官科药</a>
+							<a href="javascript:;">妇科用药</a>
+							<a href="javascript:;">男科用药</a>
+							<a href="javascript:;">儿科用药</a>
+							<a href="javascript:;">神经系统</a>
+							<a href="javascript:;">肝胆用药</a>
+							<a href="javascript:;">营养滋补</a>
+							<a href="javascript:;">民族用药</a>
+						</div>
+					</li>
+					<li class="hover">
+						<h5>
+							<a href="javascript:;">养生保健</a>
+							<i></i>
+						</h5>
+						<div class="items">
+							<a href="javascript:;">大众养生</a>
+							<a href="javascript:;">男性保健</a>
+							<a href="javascript:;">女性保健</a>
+							<a href="javascript:;">中老年保健</a>
+							<a href="javascript:;">青少年儿童</a>
+						</div>
+					</li>
+					<li class="hover">
+						<h5>
+							<a href="javascript:;">医疗器械</a>
+							<i></i>
+						</h5>
+						<div class="items">
+							<a href="javascript:;">家庭常备</a>
+							<a href="javascript:;">检测设备</a>
+							<a href="javascript:;">助行器械</a>
+							<a href="javascript:;">康复理疗</a>
+							<a href="javascript:;">中医器械</a>
+							<a href="javascript:;">医疗用品</a>
+							<a href="javascript:;">供氧器械</a>
+							<a href="javascript:;">外用贴膏</a>
+							<a href="javascript:;">隐形眼镜</a>
+						</div>
+					</li>
+					<li class="hover">
+						<h5>
+							<a href="javascript:;">计生用品</a>
+							<i></i>
+						</h5>
+						<div class="items">
+							<a href="javascript:;">避孕用品</a>
+							<a href="javascript:;">检测用品</a>
+							<a href="javascript:;">情趣用品</a>
+						</div>
+					</li>
+					<li class="hover">
+						<h5>
+							<a href="javascript:;">中药饮片</a>
+							<i></i>
+						</h5>
+						<div class="items">
+							<a href="javascript:;">名贵中药</a>
+							<a href="javascript:;">中药材</a>
+							<a href="javascript:;">中药粉末</a>
+							<a href="javascript:;">茶</a>
+						</div>
+					</li>
+					<li class="hover">
+						<h5>
+							<a href="javascript:;">美容护肤</a>
+							<i></i>
+						</h5>
+						<div class="items">
+							<a href="javascript:;">药妆</a>
+							<a href="javascript:;">时尚彩妆</a>
+							<a href="javascript:;">身体护理</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/html" id="template_first">
+			{{each lists as value i}}
+				{{if i%3==0&&i!=0}}
+					<li class="last">
+						<div class="info">
+							<a href="javascript:;" class="photo">
+								<img src="{{value.product[0]}}">
+							</a>
+							<p class="money">￥<span>{{value.product[1]}}</span></p>
+							<a href="javascript:;" class="txt"><span class="pp">{{value.product[2]}}</span> <span class="mc">{{value.product[3]}}</span></a>
+							<p class="st">规格：<span>{{value.product[4]}}</span></p>
+							<div class="op">
+								<span>
+									共<b>355</b>个商家有售
+								</span>
+							</div>
+						</div>
+					</li>
+				{{else}}
+					<li>
+						<div class="info">
+							<a href="javascript:;" class="photo">
+								<img src="{{value.product[0]}}">
+							</a>
+							<p class="money">￥<span>{{value.product[1]}}</span></p>
+							<a href="javascript:;" class="txt"><span class="pp">{{value.product[2]}}</span> <span class="mc">{{value.product[3]}}</span></a>
+							<p class="st">规格：<span>{{value.product[4]}}</span></p>
+							<div class="op">
+								<span>
+									共<b>355</b>个商家有售
+								</span>
+							</div>
+						</div>
+					</li>
+				{{/if}}
+			{{/each}}
+		</script>
+		<div class="cont-right">
+			<div class="bread">
+				<a href="javascript:;">药房网商城</a>
+				<i></i>
+				<a href="javascript:;">中西药品</a>
+				<i></i>
+				<a href="javascript:;">胃肠用药</a>
+			</div>
+			<div class="select">
+				<div class="opt">
+					<div class="tj">
+						共<b>2000</b>件相关商品
+					</div>
+				</div>
+				<ul class="sitems">
+					<li>
+						<span class="bit">适应范围：</span>
+						<a href="javascript:;">胃炎</a>
+						<a href="javascript:;">胃溃疡</a>
+						<a href="javascript:;">急性肠炎</a>
+						<a href="javascript:;">十二指肠溃疡</a>
+						<a href="javascript:;">胆囊炎</a>
+						<a href="javascript:;">便秘</a>
+						<a href="javascript:;">消化不良</a>
+						<a href="javascript:;">痔疮</a>
+						<a href="javascript:;">腹痛腹泻</a>
+					</li>
+					<li>
+						<span class="bit">厂家选择：</span>
+						<a href="javascript:;">江苏黄河</a>
+						<a href="javascript:;">康普</a>
+						<a href="javascript:;">苏州弘森</a>
+						<a href="javascript:;">江苏长江</a>
+						<a href="javascript:;">南京白敬宇</a>
+						<a href="javascript:;">佑华制药</a>
+						<a href="javascript:;">广州一品红制药有限公司</a>
+						<a href="javascript:;">云南龙发</a>
+						<a href="javascript:;">武汉华一</a>
+						<a href="javascript:;">江苏黄河</a>
+						<a href="javascript:;">康普</a>
+						<a href="javascript:;">苏州弘森</a>
+						<a href="javascript:;">江苏长江</a>
+						<a href="javascript:;">南京白敬宇</a>
+						<a href="javascript:;">佑华制药</a>
+						<a href="javascript:;">广州一品红制药有限公司</a>
+						<a href="javascript:;">云南龙发</a>
+						<a href="javascript:;">武汉华一</a>
+						<a href="javascript:;">江苏黄河</a>
+						<a href="javascript:;">康普</a>
+						<a href="javascript:;">苏州弘森</a>
+						<a href="javascript:;">江苏长江</a>
+						<a href="javascript:;">南京白敬宇</a>
+						<a href="javascript:;">佑华制药</a>
+						<a href="javascript:;">广州一品红制药有限公司</a>
+						<a href="javascript:;">云南龙发</a>
+						<a href="javascript:;">武汉华一</a>
+						<a href="javascript:;">云南龙发</a>
+						<a href="javascript:;">武汉华一</a>
+						<a href="javascript:;">江苏黄河</a>
+						<a href="javascript:;">康普</a>
+						<a href="javascript:;">苏州弘森</a>
+						<a href="javascript:;">江苏长江</a>
+						<a href="javascript:;">南京白敬宇</a>
+						<a href="javascript:;">佑华制药</a>
+						<a href="javascript:;">广州一品红制药有限公司</a>
+						<a href="javascript:;">云南龙发</a>
+						<a href="javascript:;">武汉华一</a>
+						<a href="javascript:;">江苏黄河</a>
+						<a href="javascript:;">康普</a>
+						<a href="javascript:;">苏州弘森</a>
+						<a href="javascript:;">江苏长江</a>
+						<a href="javascript:;">南京白敬宇</a>
+						<a href="javascript:;">佑华制药</a>
+						<a href="javascript:;">广州一品红制药有限公司</a>
+						<a href="javascript:;">云南龙发</a>
+						<a href="javascript:;">武汉华一</a>
+						<a href="javascript:;">云南龙发</a>
+						<a href="javascript:;">武汉华一</a>
+						<a href="javascript:;">江苏黄河</a>
+						<a href="javascript:;">康普</a>
+						<a href="javascript:;">苏州弘森</a>
+						<a href="javascript:;">江苏长江</a>
+						<span class="sub">
+							<label class="tip_more">展开</label>
+							<i class="icons"></i>
+						</span>
+					</li>
+					<li>
+						<span class="bit">品牌选择：</span>
+						<a href="javascript:;">阿拉坦-5</a>
+						<a href="javascript:;">奥斯坦</a>
+						<a href="javascript:;">辅仁</a>
+						<a href="javascript:;">安友</a>
+						<a href="javascript:;">澳迩新</a>
+						<a href="javascript:;">博华</a>
+						<a href="javascript:;">迪诺洛克</a>
+						<a href="javascript:;">彼司克</a>
+						<a href="javascript:;">得必欣</a>
+						<a href="javascript:;">多力澳</a>
+						<a href="javascript:;">奥克</a>
+						<a href="javascript:;">奥力林</a>
+						<a href="javascript:;">奥立雅</a>
+						<a href="javascript:;">奎阳宁</a>
+						<a href="javascript:;">阿拉坦-5</a>
+						<a href="javascript:;">奥斯坦</a>
+						<a href="javascript:;">辅仁</a>
+						<a href="javascript:;">安友</a>
+						<a href="javascript:;">澳迩新</a>
+						<a href="javascript:;">博华</a>
+						<a href="javascript:;">臣邦力威</a>
+						<a href="javascript:;">达适</a>
+						<a href="javascript:;">迪诺洛克</a>
+						<a href="javascript:;">彼司克</a>
+						<a href="javascript:;">得必欣</a>
+						<a href="javascript:;">多力澳</a>
+						<a href="javascript:;">奥克</a>
+						<a href="javascript:;">奥力林</a>
+						<a href="javascript:;">奥立雅</a>
+						<a href="javascript:;">奎阳宁</a>
+						<a href="javascript:;">阿拉坦-5</a>
+						<a href="javascript:;">奥斯坦</a>
+						<a href="javascript:;">辅仁</a>
+						<a href="javascript:;">安友</a>
+						<a href="javascript:;">澳迩新</a>
+						<a href="javascript:;">博华</a>
+						<a href="javascript:;">臣邦力威</a>
+						<a href="javascript:;">达适</a>
+						<a href="javascript:;">迪诺洛克</a>
+						<a href="javascript:;">奥力林</a>
+						<a href="javascript:;">奥立雅</a>
+						<a href="javascript:;">奎阳宁</a>
+						<a href="javascript:;">阿拉坦-5</a>
+						<a href="javascript:;">奥斯坦</a>
+						<a href="javascript:;">辅仁</a>
+						<a href="javascript:;">安友</a>
+						<a href="javascript:;">澳迩新</a>
+						<a href="javascript:;">博华</a>
+						<a href="javascript:;">臣邦力威</a>
+						<a href="javascript:;">达适</a>
+						<a href="javascript:;">迪诺洛克</a>
+						<a href="javascript:;">彼司克</a>
+						<a href="javascript:;">得必欣</a>
+						<a href="javascript:;">多力澳</a>
+						<a href="javascript:;">奥克</a>
+						<a href="javascript:;">奥力林</a>
+						<a href="javascript:;">奥立雅</a>
+						<a href="javascript:;">奎阳宁</a>
+						<span class="sub">
+							<label class="tip_more">展开</label>
+							<i class="icons"></i>
+						</span>
+					</li>
+					<li>
+						<span class="bit">剂型选择：</span>
+						<a href="javascript:;">大蜜丸剂</a>
+						<a href="javascript:;">滴剂</a>
+						<a href="javascript:;">干混悬剂</a>
+						<a href="javascript:;">灌肠剂(含甘油)</a>
+						<a href="javascript:;">咀嚼片</a>
+						<a href="javascript:;">溶液剂(含甘油)</a>
+						<a href="javascript:;">软胶囊剂</a>
+						<a href="javascript:;">肠溶胶囊剂</a>
+						<a href="javascript:;">颗粒剂(无糖型)</a>
+						<a href="javascript:;">口服溶液剂(无糖型)</a>
+						<a href="javascript:;">滴剂</a>
+						<a href="javascript:;">干混悬剂</a>
+						<a href="javascript:;">灌肠剂(含甘油)</a>
+						<a href="javascript:;">咀嚼片</a>
+						<a href="javascript:;">溶液剂(含甘油)</a>
+						<a href="javascript:;">软胶囊剂</a>
+						<a href="javascript:;">肠溶胶囊剂</a>
+						<a href="javascript:;">颗粒剂(无糖型)</a>
+						<a href="javascript:;">口服溶液剂(无糖型)</a>
+						<a href="javascript:;">滴剂</a>
+						<a href="javascript:;">干混悬剂</a>
+						<a href="javascript:;">灌肠剂(含甘油)</a>
+						<a href="javascript:;">咀嚼片</a>
+						<a href="javascript:;">溶液剂(含甘油)</a>
+						<a href="javascript:;">软胶囊剂</a>
+						<a href="javascript:;">肠溶胶囊剂</a>
+						<a href="javascript:;">颗粒剂(无糖型)</a>
+						<a href="javascript:;">口服溶液剂(无糖型)</a>
+						<a href="javascript:;">滴剂</a>
+						<a href="javascript:;">干混悬剂</a>
+						<a href="javascript:;">灌肠剂(含甘油)</a>
+						<a href="javascript:;">咀嚼片</a>
+						<a href="javascript:;">溶液剂(含甘油)</a>
+						<a href="javascript:;">软胶囊剂</a>
+						<a href="javascript:;">肠溶胶囊剂</a>
+						<a href="javascript:;">颗粒剂(无糖型)</a>
+						<a href="javascript:;">口服溶液剂(无糖型)</a>
+						<a href="javascript:;">滴剂</a>
+						<a href="javascript:;">干混悬剂</a>
+						<a href="javascript:;">灌肠剂(含甘油)</a>
+						<a href="javascript:;">咀嚼片</a>
+						<a href="javascript:;">溶液剂(含甘油)</a>
+						<a href="javascript:;">软胶囊剂</a>
+						<a href="javascript:;">肠溶胶囊剂</a>
+						<a href="javascript:;">颗粒剂(无糖型)</a>
+						<a href="javascript:;">口服溶液剂(无糖型)</a>
+						<a href="javascript:;">滴剂</a>
+						<a href="javascript:;">干混悬剂</a>
+						<a href="javascript:;">灌肠剂(含甘油)</a>
+						<a href="javascript:;">咀嚼片</a>
+						<a href="javascript:;">溶液剂(含甘油)</a>
+						<a href="javascript:;">软胶囊剂</a>
+						<a href="javascript:;">肠溶胶囊剂</a>
+						<a href="javascript:;">颗粒剂(无糖型)</a>
+						<a href="javascript:;">口服溶液剂(无糖型)</a>
+						<a href="javascript:;">咀嚼片</a>
+						<a href="javascript:;">溶液剂(含甘油)</a>
+						<a href="javascript:;">软胶囊剂</a>
+						<span class="sub">
+							<label class="tip_more">展开</label>
+							<i class="icons"></i>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="filter">
+				<div class="paixu">
+					<a href="javascript:;" class="curr first">报价商家</a>
+					<a href="javascript:;" class="price">价格<i class="icons arrow"></i></a>
+				</div>
+				<div class="ckdiv n">
+					<div class="ra">
+						<i class="checked"></i>
+					</div>
+					<a href="javascript:;">仅显示有报价商品</a>
+				</div>
+				<div class="ckdiv">
+					<div class="ra">
+						<i></i>
+					</div>
+					<a href="javascript:;">显示所有商品</a>
+				</div>
+				<div class="page">
+					<a href="javascript:;" class="l d"></a>
+					<span class="num">
+						<label>1</label>/50
+					</span>
+					<a href="javascript:;" class="r"></a>
+				</div>
+			</div>
+			<ul class="goodlist"></ul>
+			<div class="pager">
+				<div class="list">
+					<a class="noprev" style="margin-right:5px;">上一页</a>
+					<a href="paging.html" style="margin-right:5px;">1</a>
+					<a href="javascript:;" class="current" style="margin-right:5px;">2</a>
+					<a href="javascript:;" style="margin-right:5px;">3</a>
+					<a href="javascript:;" style="margin-right:5px;">4</a>
+					<a href="javascript:;" style="margin-right:5px;">5</a>
+					<a href="javascript:;" style="margin-right:5px;">...</a>
+					<a class="next" href="javascript:;" style="margin-right:5px;">下一页</a>
+				</div>
+	        </div>
+		</div>
+	</div>
+
+	<!--引入首页尾部内容-->
+	<div id="index_foot"></div>
+	<script type="text/javascript" src="../js/external/index_foot.js"></script>
+	
+	
+
+	<!--引入商品详情页js-->
+	<script type="text/javascript" src="../js/paging.js"></script>
+</body>
+<script type="text/javascript">
+	var data = {
+		lists:[
+			{
+				product:['../imgs/paging/97b76317-567b-4739-b69d-9ea1b82945ae1779.jpg_300x300.jpg','23.00','丽珠得乐','枸橼酸铋钾胶囊','0.3gx10粒x4板/盒']
+			},
+			{
+				product:['../imgs/paging/cec659bc-c04d-4e27-9fb7-5324709e57045393.jpg_300x300.jpg','9.77','','天王补心丸','200丸/瓶']
+			},{
+				product:['../imgs/paging/fdec3d7d-6689-4331-a671-3b18f67b1de57964.jpg_300x300.jpg','9.00','同仁堂','天王补心丸','9gx10丸/盒']
+			},
+			{
+				product:['../imgs/paging/c00dd96d-ccc9-4904-b1a7-904e018174b87434.jpg_300x300.jpg','1.10','罗丹','奥美拉唑肠溶胶囊','20mgx14粒/瓶']
+			},
+			{
+				product:['../imgs/paging/97b76317-567b-4739-b69d-9ea1b82945ae1779.jpg_300x300.jpg','23.00','丽珠得乐','枸橼酸铋钾胶囊','0.3gx10粒x4板/盒']
+			},
+			{
+				product:['../imgs/paging/cec659bc-c04d-4e27-9fb7-5324709e57045393.jpg_300x300.jpg','9.77','','天王补心丸','200丸/瓶']
+			},{
+				product:['../imgs/paging/fdec3d7d-6689-4331-a671-3b18f67b1de57964.jpg_300x300.jpg','9.00','同仁堂','天王补心丸','9gx10丸/盒']
+			},
+			{
+				product:['../imgs/paging/c00dd96d-ccc9-4904-b1a7-904e018174b87434.jpg_300x300.jpg','1.10','罗丹','奥美拉唑肠溶胶囊','20mgx14粒/瓶']
+			},
+			{
+				product:['../imgs/paging/97b76317-567b-4739-b69d-9ea1b82945ae1779.jpg_300x300.jpg','23.00','丽珠得乐','枸橼酸铋钾胶囊','0.3gx10粒x4板/盒']
+			},
+			{
+				product:['../imgs/paging/cec659bc-c04d-4e27-9fb7-5324709e57045393.jpg_300x300.jpg','9.77','','天王补心丸','200丸/瓶']
+			},{
+				product:['../imgs/paging/fdec3d7d-6689-4331-a671-3b18f67b1de57964.jpg_300x300.jpg','9.00','同仁堂','天王补心丸','9gx10丸/盒']
+			},
+			{
+				product:['../imgs/paging/c00dd96d-ccc9-4904-b1a7-904e018174b87434.jpg_300x300.jpg','1.10','罗丹','奥美拉唑肠溶胶囊','20mgx14粒/瓶']
+			},
+			{
+				product:['../imgs/paging/97b76317-567b-4739-b69d-9ea1b82945ae1779.jpg_300x300.jpg','23.00','丽珠得乐','枸橼酸铋钾胶囊','0.3gx10粒x4板/盒']
+			},
+			{
+				product:['../imgs/paging/cec659bc-c04d-4e27-9fb7-5324709e57045393.jpg_300x300.jpg','9.77','','天王补心丸','200丸/瓶']
+			},{
+				product:['../imgs/paging/fdec3d7d-6689-4331-a671-3b18f67b1de57964.jpg_300x300.jpg','9.00','同仁堂','天王补心丸','9gx10丸/盒']
+			},
+			{
+				product:['../imgs/paging/c00dd96d-ccc9-4904-b1a7-904e018174b87434.jpg_300x300.jpg','1.10','罗丹','奥美拉唑肠溶胶囊','20mgx14粒/瓶']
+			}
+
+		]
+	}
+	console.log(data)
+	var template_first = template("template_first",data);
+	$(".goodlist").html(template_first);
+</script>
+</html>

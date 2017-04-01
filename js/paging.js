@@ -49,3 +49,13 @@ $(".goodlist").on("click", "li .photo, li .txt", function() {
 		window.location = "goods_2.html";
 	}
 })
+
+// 先从cookie中读取保存选购商品的存储结构
+var _goods = $.cookie("goods") || [];
+if(_goods != ''){
+	var _amount = 0;
+	for(var i=0; i<_goods.length; i++) {
+		_amount += _goods[i].amount;
+	}
+	$("#fixation").find(".i2").children('b').text(_amount);
+}

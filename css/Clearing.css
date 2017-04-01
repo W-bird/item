@@ -781,3 +781,69 @@ s{
 	color: #0cb95f;
 	text-decoration: underline;
 }
+
+.form{
+	background-color: #fff;
+	padding: 30px 0;
+}
+.form li{
+	padding: 10px 0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #999;
+}
+.form .first-li{
+	border-top: 1px dotted #ccc;
+	padding: 0;
+	margin: 10px 0;
+}
+.form-val{
+	margin-right: 10px;
+	width: 70px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: right;
+	float: left;
+}
+.form-val label{
+	vertical-align: middle;
+	font-size: 16px;
+	color: #e50000;
+	font-family: serif;
+}
+.form-span{
+	display: inline-block;
+	text-align: right;
+	width: 165px;
+	color: #666;
+	float: left;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+}
+.name-span{
+	position: relative;
+	float: left;
+}
+.name-span i{
+	background-image: url(../imgs/public/icons.png);
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	display: block;
+	width: 18px;
+	height: 25px;
+}
+.name-i{
+	background-position: -391px -109px;
+}
+.name-span input{
+	width: 265px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border: 1px solid #e5e5e5;
+	padding: 0 20px 0 35px;
+}

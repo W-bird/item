@@ -17,7 +17,12 @@ if (_username.length != 0) {
 // 先从cookie中读取保存选购商品的存储结构
 var _goods = $.cookie("goods") || [];
 if(_goods != ''){
-	$("#fixation").find(".i2").children('b').text(_goods[0].amount)
+	var _amount = 0;
+	for(var i=0; i<_goods.length; i++) {
+		_amount += _goods[i].amount;
+		// return _amount;
+	}
+	$("#fixation").find(".i2").children('b').text(_amount);
 }
 
 
@@ -67,7 +72,7 @@ $(function(){
 		if($("#header").find(".head-register").children('.wcom').is(':hidden')){
 			alert("请先登录");
 		} else{
-			$('body').animate({scrollTop:0}, 0);
+			// $('body').animate({scrollTop:0}, 0);
 			//飞入购物车
 			var imgSrc = $("._goodsImg").attr("src");
 			var $fly = $("<img src='"+ imgSrc +"' style='width:30px; height:30px; position:absolute'>");
@@ -75,11 +80,11 @@ $(function(){
 
 			$fly.fly({
 				start : {
-					top : e.pageY,
+					top : e.pageY - $(window).scrollTop(),
 					left : e.pageX
 				},
 				end : {
-					top : cartOffset.top,
+					top : cartOffset.top - $(window).scrollTop(),
 					left : cartOffset.left,
 					width : 10,
 					height : 10
@@ -112,7 +117,12 @@ $(function(){
 				}
 				return -1;
 			}
-			$("#fixation").find(".i2").children('b').text(_goods[0].amount)
+			var _amount = 0;
+			for(var i=0; i<_goods.length; i++) {
+				_amount += _goods[i].amount;
+				// return _amount;
+			}
+			$("#fixation").find(".i2").children('b').text(_amount);
 		}
 	})
 });
@@ -122,22 +132,6 @@ $(function(){
 $(function() {
 	var goods_2 = $.cookie("goods_2") || [];
 	if(goods_2 != ''){
-		// $(".goods").show();
-		// $("#fixation").find(".i2").children('b').text(_goods[0].amount);
-		// console.log(_goods[0])
-		// console.log(zj)
-		
-		// $(".goods-info li:first-child").children('img').attr("src",_goods[0]._goodsImg);
-		// var goodName = $(".goods-info li:first-child").children('span')[0],
-		// 	goodNorms = $(".goods-info li:first-child").children('span')[1];
-		// $(goodName).text(_goods[0]._goodName)
-		// $(goodNorms).text(_goods[0]._goodNorms)
-		// $(".goods-info li:nth-child(2)").children('span').text(_goods[0]._goodPrice)
-		// $(".goods-info li:nth-child(3)").children('span').text(_goods[0].amount)
-		// var zj = _goods[0]._goodPrice * _goods[0].amount;
-		// $(".goods-info li:nth-child(4)").children('span').text(zj)
-
-
 		$(".details").find(".big").children("img:first-child").attr("src",goods_2[0]._tp);
 		$(".details").find(".img-big").children("img:first-child").attr("src",goods_2[0]._tp);
 		$(".details").find(".samll-imgbox").find("img").attr("src",goods_2[0]._tp);
@@ -146,8 +140,15 @@ $(function() {
 		$(".details").find(".goodPp").text(goods_2[0]._pp)
 		$(".details").find("._goodNorms").text(goods_2[0]._gg)
 		$(".details").find("._goodPrice").text(goods_2[0]._jg)
-		console.log(goods_2)
-	} else{
-		console.log(0)
 	}
 })
+
+// 先从cookie中读取保存选购商品的存储结构
+var _goods = $.cookie("goods") || [];
+if(_goods != ''){
+	var _amount = 0;
+	for(var i=0; i<_goods.length; i++) {
+		_amount += _goods[i].amount;
+	}
+	$("#fixation").find(".i2").children('b').text(_amount);
+}

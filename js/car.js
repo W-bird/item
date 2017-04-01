@@ -16,16 +16,20 @@ if(_goods != ''){
 	$("#fixation").find(".i2").children('b').text(_goods[0].amount);
 	// console.log(_goods[0])
 	// console.log(zj)
-	
-	$(".goods-info li:first-child").children('img').attr("src",_goods[0]._goodsImg);
-	var goodName = $(".goods-info li:first-child").children('span')[0],
-		goodNorms = $(".goods-info li:first-child").children('span')[1];
-	$(goodName).text(_goods[0]._goodName)
-	$(goodNorms).text(_goods[0]._goodNorms)
-	$(".goods-info li:nth-child(2)").children('span').text(_goods[0]._goodPrice)
-	$(".goods-info li:nth-child(3)").children('span').text(_goods[0].amount)
-	var zj = _goods[0]._goodPrice * _goods[0].amount;
-	$(".goods-info li:nth-child(4)").children('span').text(zj)
+	for(var i=0; i<_goods.length; i++) {
+		var oUls = $(".goods-info"),
+			html="";
+			html="<ul class='goods-info'><li><img src=''><span class='first-span'></span><span class='last-span'></span><input type='checkbox' name='yes' id='one'></li><li>￥<span></span></li><li><span></span></li><li>￥<span></span></li></ul>"
+		$(".goods-all").append(html);
+		$(oUls[i]).find("li:first-child").children('img').attr("src",_goods[i]._goodsImg);
+		$(oUls[i]).find("li:first-child").children('.first-span').text(_goods[i]._goodName);
+		$(oUls[i]).find("li:first-child").children('.last-span').text(_goods[i]._goodNorms);
+		$(oUls[i]).find("li:nth-child(2)").children('span').text(_goods[i]._goodPrice);
+		$(oUls[i]).find("li:nth-child(3)").children('span').text(_goods[i].amount);
+		var zj = _goods[i]._goodPrice * _goods[i].amount;
+		$(oUls[i]).find("li:nth-child(4)").children('span').text(zj);
+	}
+	$(".goods-info:last-child").hide();
 } else{
 	$(".goods").hide();
 	$(".car-content").show();
@@ -119,29 +123,42 @@ $("#all").click(function() {
 	// console.log($(".goods-all").find("input").css("chexked",true))
 });
 
+
 /* 删除所在行数据 */
 $(".goods-remove").click(function(){
 	// 获取待删除的商品对象
 	var _good = $(".goods-all").find("input:checkbox[name='yes']:checked").parent().children(".first-span").text();
 	
 	// 获取删除的商品对象在数组中的索引
-	var index = $.inArray(_good, _goods[0]._goodName);
-	
-	// 从数组中删除商品
-	if (_good == _goods[0]._goodName) {
-		_goods.splice(_good, 1);
-		// 覆盖保存回cookie中
-		$.cookie("goods", _goods, {expires:7, path:"/"});
+	for(var i=0; i<_goods.length; i++) {
+		if(_goods[i]._goodName == _good){
+			_goods.splice(i, 1);
+			// 覆盖保存回cookie中
+			$.cookie("goods", _goods, {expires:7, path:"/"});
+			$($(".goods-info")[i]).remove();
 
-		// 将页面当前行删除
-		$(this).parents(".goods-all").remove();
-		$(".goods").hide();
-		$(".car-content").show();
+			if (_goods == "") {
+				$(".goods").hide();
+				$(".car-content").show();
+			}
+		}
 	}
+	// 从数组中删除商品
+	// if (_good == _goods[0]._goodName) {
+	// 	_goods.splice(_good, 1);
+	// 	// 覆盖保存回cookie中
+	// 	$.cookie("goods", _goods, {expires:7, path:"/"});
+
+	// 	// 将页面当前行删除
+	// 	$(this).parents(".goods-info").remove();
+	// 	$(".goods").hide();
+	// 	$(".car-content").show();
+	// }
 
 	return false; // 阻止事件冒泡与阻止默认行为
 });
 
+//点击去结算
 $(".goods-goBuy").click(function() {
 	// 从cookie中读取保存选购商品的存储结构
 	var _goods = $.cookie("goods") || [];
@@ -150,6 +167,7 @@ $(".goods-goBuy").click(function() {
 	}
 });
 
+//点击退出登录
 $(".quit").click(function() {
 	console.log(8)
 	var _username = $.cookie("username") || [];
@@ -165,3 +183,13 @@ $(".quit").click(function() {
 
 	window.location = "index.html"
 });
+
+// 先从cookie中读取保存选购商品的存储结构
+var _goods = $.cookie("goods") || [];
+if(_goods != ''){
+	var _amount = 0;
+	for(var i=0; i<_goods.length; i++) {
+		_amount += _goods[i].amount;
+	}
+	$("#fixation").find(".i2").children('b').text(_amount);
+}
